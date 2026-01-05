@@ -6,7 +6,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import me.flipstargamer.kinetica.KineticaRegistries;
 import me.flipstargamer.kinetica.ModDataAttachments;
 import me.flipstargamer.kinetica.powers.Power;
-import me.flipstargamer.kinetica.powers.Powers;
+import me.flipstargamer.kinetica.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
@@ -42,9 +42,9 @@ public class PowerCommand {
         ServerPlayer player = context.getSource().getPlayerOrException();
         Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
 
-        Powers.addPower(player, power);
+        PowerManager.addPower(player, power);
 
-        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.add",  Powers.getPowerTranslation(power)), true);
+        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.add",  power.value().getTranslation()), true);
 
         return 1;
     }
@@ -53,9 +53,9 @@ public class PowerCommand {
         ServerPlayer player = context.getSource().getPlayerOrException();
         Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
 
-        Powers.removePower(player, power);
+        PowerManager.removePower(player, power);
 
-        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.remove",  Powers.getPowerTranslation(power)), true);
+        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.remove", power.value().getTranslation()), true);
 
         return 1;
     }
@@ -74,7 +74,7 @@ public class PowerCommand {
 
         for (Holder<Power> power : powers) {
             message.append(Component.literal("\n - ").withStyle(ChatFormatting.YELLOW));
-            message.append(Powers.getPowerTranslation(power));
+            message.append(power.value().getTranslation());
         }
 
         context.getSource().sendSuccess(() -> message, false);

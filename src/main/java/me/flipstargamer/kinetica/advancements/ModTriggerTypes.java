@@ -8,8 +8,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.function.Supplier;
-
 public class ModTriggerTypes {
     public static final DeferredRegister<CriterionTrigger<?>> TRIGGER_TYPES =
             DeferredRegister.create(Registries.TRIGGER_TYPE, Kinetica.MOD_ID);
