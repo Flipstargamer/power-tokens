@@ -1,0 +1,83 @@
+package me.flipstargamer.kinetica.commands;
+
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import me.flipstargamer.kinetica.KineticaRegistries;
+import me.flipstargamer.kinetica.ModDataAttachments;
+import me.flipstargamer.kinetica.powers.Power;
+import me.flipstargamer.kinetica.powers.Powers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.commands.CommandBuildContext;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.ResourceArgument;
+import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.server.level.ServerPlayer;
+
+import java.util.List;
+
+public class PowerCommand {
+    public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext context) {
+        dispatcher.register(Commands.literal("powers")
+                .then(Commands.literal("list")
+                        .executes(PowerCommand::listPowers)
+                )
+                .then(Commands.literal("add")
+                        .then(Commands.argument("power", ResourceArgument.resource(context, KineticaRegistries.POWER_REGISTRY_KEY))
+                                .executes(PowerCommand::addPower)
+                        )
+                )
+                .then(Commands.literal("remove")
+                        .then(Commands.argument("power", ResourceArgument.resource(context, KineticaRegistries.POWER_REGISTRY_KEY))
+                                .executes(PowerCommand::removePower)
+                        )
+                )
+        );
+    }
+
+    private static int addPower(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        ServerPlayer player = context.getSource().getPlayerOrException();
+        Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
+
+        Powers.addPower(player, power);
+
+        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.add",  Powers.getPowerTranslation(power)), true);
+
+        return 1;
+    }
+
+    private static int removePower(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        ServerPlayer player = context.getSource().getPlayerOrException();
+        Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
+
+        Powers.removePower(player, power);
+
+        context.getSource().sendSuccess(() -> Component.translatable("commands.powers.remove",  Powers.getPowerTranslation(power)), true);
+
+        return 1;
+    }
+
+    private static int listPowers(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        ServerPlayer player = context.getSource().getPlayerOrException();
+
+        List<Holder<Power>> powers = player.getData(ModDataAttachments.PLAYER_POWERS);
+
+        if (powers.isEmpty()) {
+            context.getSource().sendSuccess(() -> Component.translatable("commands.powers.list.none"), false);
+            return 0;
+        }
+
+        MutableComponent message = Component.translatable("commands.powers.list.title").withStyle(ChatFormatting.GOLD);
+
+        for (Holder<Power> power : powers) {
+            message.append(Component.literal("\n - ").withStyle(ChatFormatting.YELLOW));
+            message.append(Powers.getPowerTranslation(power));
+        }
+
+        context.getSource().sendSuccess(() -> message, false);
+        return powers.size(); // Returning the count is good practice in Brigadier
+    }
+}

@@ -1,0 +1,7 @@
+// 1.21.11	2026-01-05T14:26:35.7047614	Model Definitions - kinetica
+c0b3f3b1a881beecc9b20616df31d8e43648c190 assets/kinetica/items/power_token.json
+71aefea4a90e8d2c2fbfa0c80df691a0a36320ad assets/kinetica/items/power_token_core.json
+1c9d55153eab1a3fdac9d754788b085a9040d2fd assets/kinetica/items/power_token_shard.json
+5d948cc7bff29d125ede23cdd65d357b186d5a4e assets/kinetica/models/item/power_token.json
+a8df8089910489f79d2d1b2935fd7d985fbd3225 assets/kinetica/models/item/power_token_core.json
+ec3dfebb216dc7e91066fa7131f9512f569fdb3d assets/kinetica/models/item/power_token_shard.json

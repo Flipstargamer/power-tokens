@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "#c:gems/diamond",
+    "N": "#c:ingots/netherite",
+    "x": "#c:nether_stars"
+  },
+  "pattern": [
+    "DND",
+    "DxD",
+    "DND"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kinetica:power_token_core"
+  }
+}

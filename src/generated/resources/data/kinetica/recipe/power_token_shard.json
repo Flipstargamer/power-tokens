@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": "minecraft:gold_block",
+    "I": "minecraft:iron_block",
+    "N": "#c:ingots/netherite"
+  },
+  "pattern": [
+    "GIG",
+    "GNG",
+    "GIG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kinetica:power_token_shard"
+  }
+}
