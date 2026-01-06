@@ -4,12 +4,11 @@ import com.mojang.serialization.Codec;
 import me.flipstargamer.kinetica.powers.Power;
 import net.minecraft.advancements.criterion.SimpleCriterionTrigger;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class PowerObtainedTrigger extends SimpleCriterionTrigger<@NotNull PowerObtainedTriggerInstance> {
     @Override
-    public Codec<PowerObtainedTriggerInstance> codec() {
+    public @NotNull Codec<PowerObtainedTriggerInstance> codec() {
         return PowerObtainedTriggerInstance.CODEC;
     }
 

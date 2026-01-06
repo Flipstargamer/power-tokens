@@ -10,10 +10,7 @@ import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.criterion.RecipeCraftedTrigger;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.PackOutput;
-import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.advancements.AdvancementSubProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -21,9 +18,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider implements AdvancementSubProvider {

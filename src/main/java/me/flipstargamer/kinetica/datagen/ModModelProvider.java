@@ -6,12 +6,8 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.stream.Stream;
 
 public class ModModelProvider extends ModelProvider {
 

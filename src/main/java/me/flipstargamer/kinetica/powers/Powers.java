@@ -7,24 +7,18 @@ import me.flipstargamer.kinetica.advancements.ModTriggerTypes;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Supplier;
 
 @EventBusSubscriber(modid = Kinetica.MOD_ID)
 public class Powers {
@@ -50,6 +44,7 @@ public class Powers {
         POWERS.register(bus);
     }
 
+    @Deprecated(since = "1.0.0", forRemoval = true)
     public static void addPower(LivingEntity entity, Holder<Power> power) {
         List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
 
@@ -66,10 +61,12 @@ public class Powers {
         }
     }
 
+    @Deprecated(since = "1.0.0", forRemoval = true)
     public static void addPower(LivingEntity entity, Power power) {
         addPower(entity, KineticaRegistries.POWER_REGISTRY.wrapAsHolder(power));
     }
 
+    @Deprecated(since = "1.0.0", forRemoval = true)
     public static void removePower(LivingEntity entity, Holder<Power> power) {
         List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
 
@@ -82,43 +79,12 @@ public class Powers {
         truePower.remove(entity);
     }
 
+    @Deprecated(since = "1.0.0", forRemoval = true)
     public static void removePower(LivingEntity entity, Power power) {
         removePower(entity, KineticaRegistries.POWER_REGISTRY.wrapAsHolder(power));
     }
 
-    @SubscribeEvent
-    private static void clonePowers(PlayerEvent.Clone event) {
-        if (!event.isWasDeath()) return;
-
-        Kinetica.LOGGER.debug("Test test!");
-
-        Player originalPlayer = event.getOriginal();
-        if (!originalPlayer.hasData(ModDataAttachments.PLAYER_POWERS)) return;
-
-        Player newPlayer = event.getEntity();
-        List<Holder<Power>> powers = originalPlayer.getData(ModDataAttachments.PLAYER_POWERS);
-
-        for (Holder<Power> power : powers) {
-            addPower(newPlayer, power);
-        }
-    }
-
-    @SubscribeEvent
-    private static void entityJoined(EntityJoinLevelEvent event) {
-        if (event.getEntity() instanceof LivingEntity entity) {
-            if (!entity.hasData(ModDataAttachments.PLAYER_POWERS)) return;
-
-            List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
-
-            for (Holder<Power> power : powers) {
-                Power truePower = power.value();
-
-                if (truePower.shouldReapplyOnJoin())
-                    truePower.apply(entity);
-            }
-        }
-    }
-
+    @Deprecated(since = "1.0.0", forRemoval = true)
     public static Component getPowerTranslation(Holder<Power> power) {
         Identifier key = Objects.requireNonNull(power.getKey()).identifier();
         return Component.translatable("powers." + key.getNamespace() + "." + key.getPath());

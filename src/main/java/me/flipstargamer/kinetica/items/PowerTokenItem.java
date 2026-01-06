@@ -4,20 +4,16 @@ import me.flipstargamer.kinetica.KineticaRegistries;
 import me.flipstargamer.kinetica.KineticaTags;
 import me.flipstargamer.kinetica.ModDataAttachments;
 import me.flipstargamer.kinetica.powers.Power;
-import me.flipstargamer.kinetica.powers.Powers;
+import me.flipstargamer.kinetica.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.neoforged.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -56,8 +52,8 @@ public class PowerTokenItem extends Item {
 
             player.getItemInHand(hand).shrink(1);
             player.displayClientMessage(Component.translatable("item.kinetica.power.token.pass",
-                    Powers.getPowerTranslation(power)), true);
-            Powers.addPower(player, power);
+                    power.value().getTranslation()), true);
+            PowerManager.addPower(player, power);
             return InteractionResult.SUCCESS_SERVER;
         }
 

@@ -14,6 +14,6 @@ public record PowerPredicate(Optional<Holder<Power>> power) implements Predicate
 
     @Override
     public boolean test(Power toTest) {
-        return power.map(powerHolder -> powerHolder.value() == toTest).orElse(true);
+        return power.map(toTest::is).orElse(true);
     }
 }
