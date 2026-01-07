@@ -1,13 +1,15 @@
 package me.flipstargamer.kinetica.items;
 
+import com.google.common.collect.BoundType;
 import me.flipstargamer.kinetica.KineticaRegistries;
-import me.flipstargamer.kinetica.KineticaTags;
 import me.flipstargamer.kinetica.ModDataAttachments;
 import me.flipstargamer.kinetica.powers.Power;
 import me.flipstargamer.kinetica.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,18 +18,23 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class PowerTokenItem extends Item {
-    public PowerTokenItem(Properties properties) {
+    public final List<TagKey<Power>> tagKeyList;
+
+    public PowerTokenItem(Properties properties, List<TagKey<Power>> tagKeyList) {
         super(properties);
+
+        this.tagKeyList = tagKeyList;
     }
 
-    private Optional<Holder<Power>> getRandomPower(LivingEntity entity) {
+    private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag) {
         List<Holder<Power>> ownedPowers = entity.getData(ModDataAttachments.PLAYER_POWERS);
 
-        List<Holder<Power>> available = KineticaRegistries.POWER_REGISTRY.getOrThrow(KineticaTags.POSITIVE_POWER).stream()
+        List<Holder<Power>> available = KineticaRegistries.POWER_REGISTRY.getOrThrow(fromTag).stream()
                 .filter((power) -> !ownedPowers.contains(power))
                 .toList();
 
@@ -39,21 +46,28 @@ public class PowerTokenItem extends Item {
 
     @Override
     public @NotNull InteractionResult use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
-        if (!level.isClientSide()) {
-            Optional<Holder<Power>> powerOptional = getRandomPower(player);
+        if (player instanceof ServerPlayer serverPlayer) {
+            ArrayList<Holder<Power>> powersPicked = new ArrayList<>();
 
-            if (powerOptional.isEmpty()) {
-                player.displayClientMessage(Component.translatable("item.kinetica.power_token.fail")
-                        .withStyle(ChatFormatting.RED), true);
-                return InteractionResult.SUCCESS_SERVER;
+            for (TagKey<Power> tagKey : tagKeyList) {
+                Optional<Holder<Power>> powerOptional = getRandomPower(serverPlayer, tagKey);
+
+                if (powerOptional.isEmpty()) {
+                    serverPlayer.displayClientMessage(Component.translatable("item.kinetica.power_token.fail")
+                            .withStyle(ChatFormatting.RED), true);
+                    return InteractionResult.SUCCESS_SERVER;
+                }
+
+                PowerManager.addPower(serverPlayer, powerOptional.get());
+                powersPicked.add(powerOptional.get());
             }
 
-            Holder<Power> power = powerOptional.get();
+            for (Holder<Power> power : powersPicked) {
+                serverPlayer.sendSystemMessage(Component.translatable("item.kinetica.power.token.pass",
+                        power.value().getTranslation()));
+            }
 
-            player.getItemInHand(hand).shrink(1);
-            player.displayClientMessage(Component.translatable("item.kinetica.power.token.pass",
-                    power.value().getTranslation()), true);
-            PowerManager.addPower(player, power);
+            serverPlayer.getItemInHand(hand).shrink(1);
             return InteractionResult.SUCCESS_SERVER;
         }
 
