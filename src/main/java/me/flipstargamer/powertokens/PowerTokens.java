@@ -14,7 +14,7 @@ import net.neoforged.fml.common.Mod;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(PowerTokens.MOD_ID)
 public class PowerTokens {
-    public static final String MOD_ID = "kinetica";
+    public static final String MOD_ID = "power_tokens";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 

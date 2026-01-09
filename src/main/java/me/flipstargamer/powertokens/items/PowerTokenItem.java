@@ -2,10 +2,12 @@ package me.flipstargamer.powertokens.items;
 
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.PowerTokens;
 import me.flipstargamer.powertokens.powers.Power;
 import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
@@ -32,8 +34,9 @@ public class PowerTokenItem extends Item {
 
     private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag) {
         List<Holder<Power>> ownedPowers = entity.getData(ModDataAttachments.PLAYER_POWERS);
+        Registry<Power> powerRegistry = entity.level().registryAccess().lookupOrThrow(PowerTokenRegistries.POWER_REGISTRY_KEY);
 
-        List<Holder<Power>> available = PowerTokenRegistries.POWER_REGISTRY.getOrThrow(fromTag).stream()
+        List<Holder<Power>> available = powerRegistry.getOrThrow(fromTag).stream()
                 .filter((power) -> !ownedPowers.contains(power))
                 .toList();
 
@@ -52,19 +55,22 @@ public class PowerTokenItem extends Item {
                 Optional<Holder<Power>> powerOptional = getRandomPower(serverPlayer, tagKey);
 
                 if (powerOptional.isEmpty()) {
-                    serverPlayer.displayClientMessage(Component.translatable("item.kinetica.power_token.fail")
+                    serverPlayer.displayClientMessage(Component.translatable("item.power_tokens.power_token.fail")
                             .withStyle(ChatFormatting.RED), true);
                     return InteractionResult.SUCCESS_SERVER;
                 }
 
-                PowerManager.addPower(serverPlayer, powerOptional.get());
                 powersPicked.add(powerOptional.get());
             }
 
             for (Holder<Power> power : powersPicked) {
-                serverPlayer.sendSystemMessage(Component.translatable("item.kinetica.power.token.pass",
+                PowerManager.addPower(serverPlayer, power);
+
+                serverPlayer.sendSystemMessage(Component.translatable("item.power_tokens.power.token.pass",
                         power.value().getTranslation()));
             }
+
+            PowerTokens.LOGGER.debug("Test debug");
 
             serverPlayer.getItemInHand(hand).shrink(1);
             return InteractionResult.SUCCESS_SERVER;

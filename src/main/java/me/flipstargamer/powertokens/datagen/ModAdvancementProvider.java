@@ -27,8 +27,8 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
         AdvancementHolder root = Advancement.Builder.advancement()
                 .display(
                         ModItems.POWER_TOKEN.get(),
-                        Component.translatable("advancements.kinetica.root.title"),
-                        Component.translatable("advancements.kinetica.root.description"),
+                        Component.translatable("advancements.power_tokens.root.title"),
+                        Component.translatable("advancements.power_tokens.root.description"),
                         Identifier.withDefaultNamespace("textures/block/dirt"),
                         AdvancementType.TASK,
                         true,
@@ -41,8 +41,8 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
         Advancement.Builder.advancement()
                 .display(
                         Items.NETHER_STAR,
-                        Component.translatable("advancements.kinetica.craftedtoken.title"),
-                        Component.translatable("advancements.kinetica.craftedtoken.description"),
+                        Component.translatable("advancements.power_tokens.craftedtoken.title"),
+                        Component.translatable("advancements.power_tokens.craftedtoken.description"),
                         null,
                         AdvancementType.GOAL,
                         true,
@@ -57,8 +57,8 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
         Advancement.Builder.advancement()
                 .display(
                         ModItems.POWER_TOKEN.get(),
-                        Component.translatable("advancements.kinetica.speed.title"),
-                        Component.translatable("advancements.kinetica.speed.description"),
+                        Component.translatable("advancements.power_tokens.speed.title"),
+                        Component.translatable("advancements.power_tokens.speed.description"),
                         null,
                         AdvancementType.TASK,
                         true,

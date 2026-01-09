@@ -1,0 +1,31 @@
+{
+  "parent": "power_tokens:main/root",
+  "criteria": {
+    "obtain_speed_boost_power": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:more_speed"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.power_tokens.speed.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "power_tokens:power_token"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.speed.title"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_speed_boost_power"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

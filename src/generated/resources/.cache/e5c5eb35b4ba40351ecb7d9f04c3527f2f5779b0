@@ -1,4 +1,4 @@
-// 1.21.11	2026-01-05T00:40:46.7059152	Advancements
-9b0706ff66cd3d85488e482f5e38a0883b40a5b3 data/kinetica/advancement/main/crafted_token.json
-6c40d4bf9473c6e11140a06c8acdb60379f8996a data/kinetica/advancement/main/root.json
-84bd34b0381a58ca4619ea7ba2be2b1779779ba6 data/kinetica/advancement/main/speed_boost.json
+// 1.21.11	2026-01-09T23:23:30.8493337	Advancements
+b4dd83be739d6d6071fe8d5a0fbb34fe490dfd5f data/power_tokens/advancement/main/crafted_token.json
+db506630ad5369583b6e5376582c29dea2c46acf data/power_tokens/advancement/main/root.json
+86c77b1aa8f211980600ac505f6f7ef6f9ce4c5d data/power_tokens/advancement/main/speed_boost.json

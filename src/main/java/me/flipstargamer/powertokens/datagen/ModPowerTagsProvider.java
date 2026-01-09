@@ -23,7 +23,9 @@ public class ModPowerTagsProvider extends TagsProvider<Power> {
         getOrCreateRawBuilder(PowerTokenTags.POSITIVE_POWER)
                 .addElement(Powers.HEALTH_POWER.getId())
                 .addElement(Powers.NATURAL_ARMOR.getId())
-                .addElement(Powers.SPEED_POWER.getId())
+                .addElement(Powers.SPEED_POWER.getId());
+
+        getOrCreateRawBuilder(PowerTokenTags.NEGATIVE_POWER)
                 .addElement(Powers.TINY_POWER.getId());
     }
 }

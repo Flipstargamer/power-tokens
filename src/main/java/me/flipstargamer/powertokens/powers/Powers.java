@@ -21,10 +21,10 @@ public class Powers {
             registerAttribute("more_health", Attributes.MAX_HEALTH, 10, AttributeModifier.Operation.ADD_VALUE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> SPEED_POWER =
-            registerAttribute("natural_armor", Attributes.MOVEMENT_SPEED, 0.6f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+            registerAttribute("more_speed", Attributes.MOVEMENT_SPEED, 0.6f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> TINY_POWER =
-            registerAttribute("natural_armor", Attributes.ARMOR, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+            registerAttribute("tiny", Attributes.ARMOR, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> NATURAL_ARMOR =
             registerAttribute("natural_armor", Attributes.ARMOR, 5, AttributeModifier.Operation.ADD_VALUE);

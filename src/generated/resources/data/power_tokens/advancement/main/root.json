@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "obtain_a_power": {
+      "conditions": {
+        "power": {}
+      },
+      "trigger": "power_tokens:power_triggers"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/block/dirt",
+    "description": {
+      "translate": "advancements.power_tokens.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "power_tokens:power_token"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "obtain_a_power"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

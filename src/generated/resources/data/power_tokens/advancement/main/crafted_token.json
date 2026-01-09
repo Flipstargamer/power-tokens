@@ -1,0 +1,31 @@
+{
+  "parent": "power_tokens:main/root",
+  "criteria": {
+    "craft_power_token": {
+      "conditions": {
+        "recipe_id": "power_tokens:power_token"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.power_tokens.craftedtoken.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.craftedtoken.title"
+    }
+  },
+  "requirements": [
+    [
+      "craft_power_token"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

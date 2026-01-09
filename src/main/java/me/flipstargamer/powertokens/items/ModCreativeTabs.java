@@ -15,8 +15,8 @@ public class ModCreativeTabs {
             DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, PowerTokens.MOD_ID);
 
     public static final Supplier<CreativeModeTab> MAIN_TAB =
-            CREATIVE_MODE_TABS.register("kinetica", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.kinetica.main"))
+            CREATIVE_MODE_TABS.register("power_tokens", () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.power_tokens.main"))
                     .icon(() -> new ItemStack(ModItems.POWER_TOKEN.get()))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.POWER_TOKEN.get());

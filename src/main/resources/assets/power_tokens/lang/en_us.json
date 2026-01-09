@@ -1,0 +1,26 @@
+{
+  "itemGroup.power_tokens.main": "Power Tokens",
+
+  "item.power_tokens.power_token": "Power Token",
+  "item.power_tokens.power_token.fail": "§4You failed to use the power token.",
+  "item.power_tokens.power.token.pass": "You gained the %s ability.",
+  "item.power_tokens.power_token_core": "Power Token Core",
+  "item.power_tokens.power_token_shard": "Power Token Shard",
+
+  "powers.power_tokens.more_health": "More Health",
+  "powers.power_tokens.more_speed": "Speed Boost",
+  "powers.power_tokens.tiny": "Tiny",
+  "powers.power_tokens.natural_armor": "Natural Armor",
+
+  "advancements.power_tokens.root.title": "Tapping into Potential",
+  "advancements.power_tokens.root.description": "Unlock your first power!",
+  "advancements.power_tokens.speed.title": "B-Train",
+  "advancements.power_tokens.speed.description": "Unlock speed.",
+  "advancements.power_tokens.craftedtoken.title": "Fine I'll do it myself",
+  "advancements.power_tokens.craftedtoken.description": "Craft the Power Token.",
+
+  "commands.powers.list.none": "You have no powers currently.",
+  "commands.powers.list.title": "Your Powers: ",
+  "commands.powers.add": "Added power: %s",
+  "commands.powers.remove": "Removed Power: %s"
+}

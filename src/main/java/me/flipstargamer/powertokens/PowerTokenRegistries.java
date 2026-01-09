@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.RegistryBuilder;
 @EventBusSubscriber(modid = PowerTokens.MOD_ID)
 public class PowerTokenRegistries {
     public static final ResourceKey<Registry<Power>> POWER_REGISTRY_KEY =
-            ResourceKey.createRegistryKey(Identifier.fromNamespaceAndPath(PowerTokens.MOD_ID, "powers"));
+            ResourceKey.createRegistryKey(Identifier.fromNamespaceAndPath(PowerTokens.MOD_ID, "power"));
 
     public static final Registry<Power> POWER_REGISTRY = new RegistryBuilder<>(POWER_REGISTRY_KEY).sync(true).create();
 

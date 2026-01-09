@@ -23,6 +23,11 @@ public class ModItems {
     public static final DeferredItem<@NotNull Item> POWER_TOKEN_CORE = ITEMS.registerItem("power_token_core", Item::new,
             Item.Properties::new);
 
+    public static final DeferredItem<@NotNull Item> UNSTABLE_POWER_TOKEN = ITEMS.registerItem("unstable_token",
+            properties -> new PowerTokenItem(properties, List.of(PowerTokenTags.POSITIVE_POWER,
+                    PowerTokenTags.NEGATIVE_POWER, PowerTokenTags.NEGATIVE_POWER, PowerTokenTags.NEGATIVE_POWER)),
+            () -> new Item.Properties().useCooldown(1).stacksTo(1));
+
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }

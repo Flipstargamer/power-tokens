@@ -1,0 +1,7 @@
+// 1.21.11	2026-01-09T23:04:15.0394195	Model Definitions - power_tokens
+c8c6acbc2f577c87ee492beb0efb37112d3394f7 assets/power_tokens/items/power_token.json
+9fd9a9fb1b158309c389bcc037d5d32327ea27bd assets/power_tokens/items/power_token_core.json
+9e75909e371ab162fe2f432fc2f81f9510cdf0b2 assets/power_tokens/items/power_token_shard.json
+a0c8663c06b4010e15fc943de91f9d6ef5a59f11 assets/power_tokens/models/item/power_token.json
+3e785963482fdd9024e9a6c8cb256a0f3f62e0e2 assets/power_tokens/models/item/power_token_core.json
+c59887ade0abfb1fa91f4779fb71ae9665589b11 assets/power_tokens/models/item/power_token_shard.json
