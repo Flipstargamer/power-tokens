@@ -1,12 +1,12 @@
-package me.flipstargamer.kinetica.commands;
+package me.flipstargamer.powertokens.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import me.flipstargamer.kinetica.KineticaRegistries;
-import me.flipstargamer.kinetica.ModDataAttachments;
-import me.flipstargamer.kinetica.powers.Power;
-import me.flipstargamer.kinetica.powers.PowerManager;
+import me.flipstargamer.powertokens.PowerTokenRegistries;
+import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
@@ -26,12 +26,12 @@ public class PowerCommand {
                         .executes(PowerCommand::listPowers)
                 )
                 .then(Commands.literal("add")
-                        .then(Commands.argument("power", ResourceArgument.resource(context, KineticaRegistries.POWER_REGISTRY_KEY))
+                        .then(Commands.argument("power", ResourceArgument.resource(context, PowerTokenRegistries.POWER_REGISTRY_KEY))
                                 .executes(PowerCommand::addPower)
                         )
                 )
                 .then(Commands.literal("remove")
-                        .then(Commands.argument("power", ResourceArgument.resource(context, KineticaRegistries.POWER_REGISTRY_KEY))
+                        .then(Commands.argument("power", ResourceArgument.resource(context, PowerTokenRegistries.POWER_REGISTRY_KEY))
                                 .executes(PowerCommand::removePower)
                         )
                 )
@@ -40,7 +40,7 @@ public class PowerCommand {
 
     private static int addPower(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
         ServerPlayer player = context.getSource().getPlayerOrException();
-        Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
+        Holder<Power> power = ResourceArgument.getResource(context, "power", PowerTokenRegistries.POWER_REGISTRY_KEY);
 
         PowerManager.addPower(player, power);
 
@@ -51,7 +51,7 @@ public class PowerCommand {
 
     private static int removePower(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
         ServerPlayer player = context.getSource().getPlayerOrException();
-        Holder<Power> power = ResourceArgument.getResource(context, "power", KineticaRegistries.POWER_REGISTRY_KEY);
+        Holder<Power> power = ResourceArgument.getResource(context, "power", PowerTokenRegistries.POWER_REGISTRY_KEY);
 
         PowerManager.removePower(player, power);
 

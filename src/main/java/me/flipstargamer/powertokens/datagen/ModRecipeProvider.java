@@ -1,6 +1,6 @@
-package me.flipstargamer.kinetica.datagen;
+package me.flipstargamer.powertokens.datagen;
 
-import me.flipstargamer.kinetica.items.ModItems;
+import me.flipstargamer.powertokens.items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;

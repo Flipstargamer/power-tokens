@@ -1,11 +1,11 @@
-package me.flipstargamer.kinetica.commands;
+package me.flipstargamer.powertokens.commands;
 
-import me.flipstargamer.kinetica.Kinetica;
+import me.flipstargamer.powertokens.PowerTokens;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
-@EventBusSubscriber(modid = Kinetica.MOD_ID)
+@EventBusSubscriber(modid = PowerTokens.MOD_ID)
 public class CommandRegistration {
     @SubscribeEvent
     public static void commandsRegister(RegisterCommandsEvent event) {

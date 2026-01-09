@@ -1,6 +1,6 @@
-package me.flipstargamer.kinetica.datagen;
+package me.flipstargamer.powertokens.datagen;
 
-import me.flipstargamer.kinetica.Kinetica;
+import me.flipstargamer.powertokens.PowerTokens;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -12,7 +12,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = Kinetica.MOD_ID)
+@EventBusSubscriber(modid = PowerTokens.MOD_ID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherClientData(GatherDataEvent.Client event) {

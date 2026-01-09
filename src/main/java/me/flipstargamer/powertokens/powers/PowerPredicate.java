@@ -1,4 +1,4 @@
-package me.flipstargamer.kinetica.powers;
+package me.flipstargamer.powertokens.powers;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

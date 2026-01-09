@@ -1,9 +1,9 @@
-package me.flipstargamer.kinetica.powers;
+package me.flipstargamer.powertokens.powers;
 
-import me.flipstargamer.kinetica.Kinetica;
-import me.flipstargamer.kinetica.KineticaRegistries;
-import me.flipstargamer.kinetica.ModDataAttachments;
-import me.flipstargamer.kinetica.advancements.ModTriggerTypes;
+import me.flipstargamer.powertokens.PowerTokenRegistries;
+import me.flipstargamer.powertokens.PowerTokens;
+import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
@@ -34,7 +34,7 @@ public class PowerManager {
     }
 
     public static void addPower(LivingEntity entity, Power power) {
-        addPower(entity, KineticaRegistries.POWER_REGISTRY.wrapAsHolder(power));
+        addPower(entity, PowerTokenRegistries.POWER_REGISTRY.wrapAsHolder(power));
     }
 
     public static void removePower(LivingEntity entity, Holder<Power> power) {
@@ -50,14 +50,14 @@ public class PowerManager {
     }
 
     public static void removePower(LivingEntity entity, Power power) {
-        removePower(entity, KineticaRegistries.POWER_REGISTRY.wrapAsHolder(power));
+        removePower(entity, PowerTokenRegistries.POWER_REGISTRY.wrapAsHolder(power));
     }
 
     @SubscribeEvent
     private static void clonePowers(PlayerEvent.Clone event) {
         if (!event.isWasDeath()) return;
 
-        Kinetica.LOGGER.debug("Test test!");
+        PowerTokens.LOGGER.debug("Test test!");
 
         Player originalPlayer = event.getOriginal();
         if (!originalPlayer.hasData(ModDataAttachments.PLAYER_POWERS)) return;

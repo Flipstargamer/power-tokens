@@ -1,7 +1,7 @@
-package me.flipstargamer.kinetica.powers;
+package me.flipstargamer.powertokens.powers;
 
 import com.mojang.serialization.Codec;
-import me.flipstargamer.kinetica.KineticaRegistries;
+import me.flipstargamer.powertokens.PowerTokenRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -9,7 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.LivingEntity;
 
 public abstract class Power {
-    public static final Codec<Holder<Power>> CODEC = KineticaRegistries.POWER_REGISTRY.holderByNameCodec();
+    public static final Codec<Holder<Power>> CODEC = PowerTokenRegistries.POWER_REGISTRY.holderByNameCodec();
 
     public abstract void apply(LivingEntity entity);
     public abstract void remove(LivingEntity entity);
@@ -19,7 +19,7 @@ public abstract class Power {
     }
 
     public Component getTranslation() {
-        Identifier identifier = KineticaRegistries.POWER_REGISTRY.getKey(this);
+        Identifier identifier = PowerTokenRegistries.POWER_REGISTRY.getKey(this);
 
         assert identifier != null;
         return Component.translatable("powers." + identifier.getNamespace() + "." + identifier.getPath());
@@ -34,6 +34,6 @@ public abstract class Power {
     }
 
     public boolean is(TagKey<Power> powerTagKey) {
-        return KineticaRegistries.POWER_REGISTRY.getOrThrow(powerTagKey).stream().anyMatch(this::is);
+        return PowerTokenRegistries.POWER_REGISTRY.getOrThrow(powerTagKey).stream().anyMatch(this::is);
     }
 }

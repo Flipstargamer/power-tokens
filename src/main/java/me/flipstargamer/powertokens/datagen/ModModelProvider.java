@@ -1,7 +1,7 @@
-package me.flipstargamer.kinetica.datagen;
+package me.flipstargamer.powertokens.datagen;
 
-import me.flipstargamer.kinetica.Kinetica;
-import me.flipstargamer.kinetica.items.ModItems;
+import me.flipstargamer.powertokens.PowerTokens;
+import me.flipstargamer.powertokens.items.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 public class ModModelProvider extends ModelProvider {
 
     public ModModelProvider(PackOutput output) {
-        super(output, Kinetica.MOD_ID);
+        super(output, PowerTokens.MOD_ID);
     }
 
     @Override

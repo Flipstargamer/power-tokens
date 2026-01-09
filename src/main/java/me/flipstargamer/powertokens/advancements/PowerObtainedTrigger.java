@@ -1,7 +1,7 @@
-package me.flipstargamer.kinetica.advancements;
+package me.flipstargamer.powertokens.advancements;
 
 import com.mojang.serialization.Codec;
-import me.flipstargamer.kinetica.powers.Power;
+import me.flipstargamer.powertokens.powers.Power;
 import net.minecraft.advancements.criterion.SimpleCriterionTrigger;
 import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;

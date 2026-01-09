@@ -1,10 +1,10 @@
-package me.flipstargamer.kinetica.datagen;
+package me.flipstargamer.powertokens.datagen;
 
-import me.flipstargamer.kinetica.Kinetica;
-import me.flipstargamer.kinetica.advancements.PowerObtainedTriggerInstance;
-import me.flipstargamer.kinetica.items.ModItems;
-import me.flipstargamer.kinetica.powers.PowerPredicate;
-import me.flipstargamer.kinetica.powers.Powers;
+import me.flipstargamer.powertokens.PowerTokens;
+import me.flipstargamer.powertokens.advancements.PowerObtainedTriggerInstance;
+import me.flipstargamer.powertokens.items.ModItems;
+import me.flipstargamer.powertokens.powers.PowerPredicate;
+import me.flipstargamer.powertokens.powers.Powers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
@@ -72,6 +72,6 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
     }
 
     private Identifier easyId(String path) {
-        return Identifier.fromNamespaceAndPath(Kinetica.MOD_ID, path);
+        return Identifier.fromNamespaceAndPath(PowerTokens.MOD_ID, path);
     }
 }

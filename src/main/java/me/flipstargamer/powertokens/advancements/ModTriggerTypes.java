@@ -1,6 +1,6 @@
-package me.flipstargamer.kinetica.advancements;
+package me.flipstargamer.powertokens.advancements;
 
-import me.flipstargamer.kinetica.Kinetica;
+import me.flipstargamer.powertokens.PowerTokens;
 import net.minecraft.advancements.CriterionTrigger;
 import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.IEventBus;
@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ModTriggerTypes {
     public static final DeferredRegister<CriterionTrigger<?>> TRIGGER_TYPES =
-            DeferredRegister.create(Registries.TRIGGER_TYPE, Kinetica.MOD_ID);
+            DeferredRegister.create(Registries.TRIGGER_TYPE, PowerTokens.MOD_ID);
 
     public static final DeferredHolder<CriterionTrigger<?>, @NotNull PowerObtainedTrigger> POWER_OBTAINED_TRIGGER =
             TRIGGER_TYPES.register("power_triggers", PowerObtainedTrigger::new);

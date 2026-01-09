@@ -1,6 +1,6 @@
-package me.flipstargamer.kinetica.items;
+package me.flipstargamer.powertokens.items;
 
-import me.flipstargamer.kinetica.Kinetica;
+import me.flipstargamer.powertokens.PowerTokens;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, Kinetica.MOD_ID);
+            DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, PowerTokens.MOD_ID);
 
     public static final Supplier<CreativeModeTab> MAIN_TAB =
             CREATIVE_MODE_TABS.register("kinetica", () -> CreativeModeTab.builder()

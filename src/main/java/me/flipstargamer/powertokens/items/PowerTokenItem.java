@@ -1,10 +1,9 @@
-package me.flipstargamer.kinetica.items;
+package me.flipstargamer.powertokens.items;
 
-import com.google.common.collect.BoundType;
-import me.flipstargamer.kinetica.KineticaRegistries;
-import me.flipstargamer.kinetica.ModDataAttachments;
-import me.flipstargamer.kinetica.powers.Power;
-import me.flipstargamer.kinetica.powers.PowerManager;
+import me.flipstargamer.powertokens.PowerTokenRegistries;
+import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -34,7 +33,7 @@ public class PowerTokenItem extends Item {
     private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag) {
         List<Holder<Power>> ownedPowers = entity.getData(ModDataAttachments.PLAYER_POWERS);
 
-        List<Holder<Power>> available = KineticaRegistries.POWER_REGISTRY.getOrThrow(fromTag).stream()
+        List<Holder<Power>> available = PowerTokenRegistries.POWER_REGISTRY.getOrThrow(fromTag).stream()
                 .filter((power) -> !ownedPowers.contains(power))
                 .toList();
 
