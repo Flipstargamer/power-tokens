@@ -32,8 +32,7 @@ public class PowerTokenItem extends Item {
         this.tagKeyList = tagKeyList;
     }
 
-    private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag) {
-        List<Holder<Power>> ownedPowers = entity.getData(ModDataAttachments.PLAYER_POWERS);
+    private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag, List<Holder<Power>> ownedPowers) {
         Registry<Power> powerRegistry = entity.level().registryAccess().lookupOrThrow(PowerTokenRegistries.POWER_REGISTRY_KEY);
 
         List<Holder<Power>> available = powerRegistry.getOrThrow(fromTag).stream()
@@ -50,9 +49,10 @@ public class PowerTokenItem extends Item {
     public @NotNull InteractionResult use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
         if (player instanceof ServerPlayer serverPlayer) {
             ArrayList<Holder<Power>> powersPicked = new ArrayList<>();
+            List<Holder<Power>> ownedPowers = serverPlayer.getData(ModDataAttachments.PLAYER_POWERS);
 
             for (TagKey<Power> tagKey : tagKeyList) {
-                Optional<Holder<Power>> powerOptional = getRandomPower(serverPlayer, tagKey);
+                Optional<Holder<Power>> powerOptional = getRandomPower(serverPlayer, tagKey, ownedPowers);
 
                 if (powerOptional.isEmpty()) {
                     serverPlayer.displayClientMessage(Component.translatable("item.power_tokens.power_token.fail")
@@ -61,6 +61,7 @@ public class PowerTokenItem extends Item {
                 }
 
                 powersPicked.add(powerOptional.get());
+                ownedPowers.add(powerOptional.get());
             }
 
             for (Holder<Power> power : powersPicked) {

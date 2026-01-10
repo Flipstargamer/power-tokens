@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": "#minecraft:coals",
+    "g": "#c:ingots/gold",
+    "i": "#c:ingots/iron"
+  },
+  "pattern": [
+    "ccc",
+    "igi",
+    "ccc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "power_tokens:unstable_token"
+  }
+}

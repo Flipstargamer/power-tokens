@@ -6,6 +6,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
@@ -47,6 +48,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('I', Blocks.IRON_BLOCK)
                 .define('N', Tags.Items.INGOTS_NETHERITE)
                 .unlockedBy("has_netherite", has(Tags.Items.INGOTS_NETHERITE))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.UNSTABLE_POWER_TOKEN.get())
+                .pattern("ccc")
+                .pattern("igi")
+                .pattern("ccc")
+                .define('c', ItemTags.COALS)
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.INGOTS_GOLD)
+                .unlockedBy("has_gold", has(Tags.Items.INGOTS_GOLD))
                 .save(this.output);
     }
 

@@ -1,7 +1,9 @@
-// 1.21.11	2026-01-09T23:04:15.0404434	kinetica
+// 1.21.11	2026-01-10T17:03:06.0059237	kinetica
 3d5f0b023875f76da472abfa9956ddeefe20b8f6 data/power_tokens/advancement/recipes/combat/power_token.json
 23d400c3bd0b8bb7f56b234d85eb91176e9c5620 data/power_tokens/advancement/recipes/combat/power_token_core.json
 9d58ba3e7c06dc5a70bb24aeed071a490eb1ac83 data/power_tokens/advancement/recipes/combat/power_token_shard.json
+8a49d5fa1dd8bac5c9bd6e4ee4eda4239e2a0c34 data/power_tokens/advancement/recipes/combat/unstable_token.json
 2fb6c566cb41d0dfd93c3c7f5747cd687c5c332d data/power_tokens/recipe/power_token.json
 2fef596e4f4750ae2aad06f780290626dd519998 data/power_tokens/recipe/power_token_core.json
 7f2b2817d37d60b3102b5ba9a8883057462a4778 data/power_tokens/recipe/power_token_shard.json
+d5bf83ac0c1fd899050874b90c03b2f1230d6390 data/power_tokens/recipe/unstable_token.json

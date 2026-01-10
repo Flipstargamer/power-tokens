@@ -22,6 +22,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.POWER_TOKEN.get());
                         output.accept(ModItems.POWER_TOKEN_CORE.get());
                         output.accept(ModItems.POWER_TOKEN_SHARD.get());
+                        output.accept(ModItems.UNSTABLE_POWER_TOKEN.get());
                     })
                     .build());
 

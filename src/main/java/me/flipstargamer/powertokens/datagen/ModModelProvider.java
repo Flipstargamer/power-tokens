@@ -20,5 +20,6 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.POWER_TOKEN.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.POWER_TOKEN_CORE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.POWER_TOKEN_SHARD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.UNSTABLE_POWER_TOKEN.get(), ModelTemplates.FLAT_ITEM);
     }
 }

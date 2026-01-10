@@ -6,6 +6,7 @@
   "item.power_tokens.power.token.pass": "You gained the %s ability.",
   "item.power_tokens.power_token_core": "Power Token Core",
   "item.power_tokens.power_token_shard": "Power Token Shard",
+  "item.power_tokens.unstable_token": "Unstable Token",
 
   "powers.power_tokens.more_health": "More Health",
   "powers.power_tokens.more_speed": "Speed Boost",
