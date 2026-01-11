@@ -1,25 +1,14 @@
+# Power Tokens
+Power Tokens provide token items which can be used to gain positive and negative powers. This creates a fun and new way to play Minecraft.
 
-Installation information
-=======
+**Press V to open up a list of your powers.**
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Power Tokens
+To gain a power you must first craft one of the power tokens. There are three different types of power tokens.
+* Unstable Token - Cheapest, however provides two debuff powers for a random buff power.
+* Power Token - Provides a random buff power alongside a random debuff power.
+* Reinforced Token - Provides a random buff power only.
+* Selective Token -  Allows you to pick one random buff power and one downside. **(Not Implemented Yet)**
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+### Reseting
+You may be unsatisfied with your debuffs, so you can craft an Inverted Token to remove all your powers. However, this includes all your buffs.
