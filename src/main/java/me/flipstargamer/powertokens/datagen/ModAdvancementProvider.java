@@ -29,7 +29,7 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
                         ModItems.POWER_TOKEN.get(),
                         Component.translatable("advancements.power_tokens.root.title"),
                         Component.translatable("advancements.power_tokens.root.description"),
-                        Identifier.withDefaultNamespace("textures/block/dirt"),
+                        Identifier.fromNamespaceAndPath("minecraft", "textures/gui/advancements/backgrounds/stone.png"),
                         AdvancementType.TASK,
                         true,
                         true,
@@ -37,22 +37,6 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
                 )
                 .addCriterion("obtain_a_power", PowerObtainedTriggerInstance.create(new PowerPredicate(Optional.empty())))
                 .save(writer, easyId("main/root"));
-
-        Advancement.Builder.advancement()
-                .display(
-                        Items.NETHER_STAR,
-                        Component.translatable("advancements.power_tokens.craftedtoken.title"),
-                        Component.translatable("advancements.power_tokens.craftedtoken.description"),
-                        null,
-                        AdvancementType.GOAL,
-                        true,
-                        true,
-                        true
-                )
-                .parent(root)
-                .addCriterion("craft_power_token",
-                        RecipeCraftedTrigger.TriggerInstance.craftedItem(ResourceKey.create(Registries.RECIPE, easyId("power_token"))))
-                .save(writer, easyId("main/crafted_token"));
 
         Advancement.Builder.advancement()
                 .display(
