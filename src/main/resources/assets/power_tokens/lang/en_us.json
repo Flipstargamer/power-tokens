@@ -23,6 +23,20 @@
   "powers.power_tokens.more_knockback": "More Knockback",
   "powers.power_tokens.heavy_hands": "Heavy Hands",
 
+  "powers.power_tokens.more_health.description": "Gain 5 more hearts.",
+  "powers.power_tokens.more_speed.description": "Gain a 60% speed boost.",
+  "powers.power_tokens.tiny.description": "Become 50% smaller.",
+  "powers.power_tokens.natural_armor.description": "Gain a passive 2.5 points.",
+  "powers.power_tokens.burn_resistance.description": "Become immune to burn ticks.",
+  "powers.power_tokens.miner_training.description": "Mines 100% faster.",
+  "powers.power_tokens.swift_hands.description": "Gain a 70% attack speed boost.",
+  "powers.power_tokens.less_knockback.description": "Deal 50% less knockback when attacking.",
+  "powers.power_tokens.less_health.description": "Loose 2.5 hearts.",
+  "powers.power_tokens.flammable.description": "Burn for double the time.",
+  "powers.power_tokens.weakened_defense.description": "Passively loose 2.5 armor points.",
+  "powers.power_tokens.more_knockback.description": "Deal 50% more knockback when attacking.",
+  "powers.power_tokens.heavy_hands.description": "Attack speed becomes 50% slower.",
+
   "advancements.power_tokens.root.title": "Tapping into Potential",
   "advancements.power_tokens.root.description": "Unlock your first power!",
   "advancements.power_tokens.speed.title": "B-Train",
@@ -33,5 +47,10 @@
   "commands.powers.list.none": "You have no powers currently.",
   "commands.powers.list.title": "Your Powers: ",
   "commands.powers.add": "Added power: %s",
-  "commands.powers.remove": "Removed Power: %s"
+  "commands.powers.remove": "Removed Power: %s",
+
+  "key.power_tokens.open_powers": "Open Power List",
+
+  "menu.power_list.title": "Powers",
+  "menu.power_list.no_powers": "You currently have no powers!"
 }

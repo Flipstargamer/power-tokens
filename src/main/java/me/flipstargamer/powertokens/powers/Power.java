@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,11 +19,18 @@ public abstract class Power {
         return false;
     }
 
-    public Component getTranslation() {
+    public MutableComponent getTranslation() {
         Identifier identifier = PowerTokenRegistries.POWER_REGISTRY.getKey(this);
 
         assert identifier != null;
         return Component.translatable("powers." + identifier.getNamespace() + "." + identifier.getPath());
+    }
+
+    public MutableComponent getDescription() {
+        Identifier identifier = PowerTokenRegistries.POWER_REGISTRY.getKey(this);
+
+        assert identifier != null;
+        return Component.translatable("powers." + identifier.getNamespace() + "." + identifier.getPath() + ".description");
     }
 
     public boolean is(Power power) {

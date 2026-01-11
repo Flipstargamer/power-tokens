@@ -24,6 +24,7 @@ public class PowerManager {
             return;
 
         powers.add(power);
+        entity.syncData(ModDataAttachments.PLAYER_POWERS);
 
         Power truePower = power.value();
         truePower.apply(entity);
@@ -44,6 +45,7 @@ public class PowerManager {
             return;
 
         powers.remove(power);
+        entity.syncData(ModDataAttachments.PLAYER_POWERS);
 
         Power truePower = power.value();
         truePower.remove(entity);
