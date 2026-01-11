@@ -9,7 +9,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.LivingEntity;
 
-public abstract class Power {
+public abstract class Power implements PowerComparable {
     public static final Codec<Holder<Power>> CODEC = PowerTokenRegistries.POWER_REGISTRY.holderByNameCodec();
 
     public abstract void apply(LivingEntity entity);
@@ -32,6 +32,9 @@ public abstract class Power {
         assert identifier != null;
         return Component.translatable("powers." + identifier.getNamespace() + "." + identifier.getPath() + ".description");
     }
+
+    public void tick(LivingEntity entity) {}
+    public boolean shouldTick() { return false; }
 
     public boolean is(Power power) {
         return this == power;

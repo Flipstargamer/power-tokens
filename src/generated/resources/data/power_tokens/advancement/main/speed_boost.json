@@ -16,7 +16,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "power_tokens:power_token"
+      "id": "minecraft:rabbit_foot"
     },
     "title": {
       "translate": "advancements.power_tokens.speed.title"

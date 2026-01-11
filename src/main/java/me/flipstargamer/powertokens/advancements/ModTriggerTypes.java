@@ -15,6 +15,9 @@ public class ModTriggerTypes {
     public static final DeferredHolder<CriterionTrigger<?>, @NotNull PowerObtainedTrigger> POWER_OBTAINED_TRIGGER =
             TRIGGER_TYPES.register("power_triggers", PowerObtainedTrigger::new);
 
+    public static final DeferredHolder<CriterionTrigger<?>, @NotNull PowersWipedTrigger> POWERS_WIPED_TRIGGER =
+            TRIGGER_TYPES.register("powers_wiped_trigger", PowersWipedTrigger::new);
+
     public static void register(IEventBus bus) {
         TRIGGER_TYPES.register(bus);
     }

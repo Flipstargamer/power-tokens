@@ -28,13 +28,20 @@ public class ModPowerTagsProvider extends TagsProvider<Power> {
                 .addElement(Powers.BURN_RESISTANCE.getId())
                 .addElement(Powers.MINER_TRAINING.getId())
                 .addElement(Powers.SWIFT_HANDS.getId())
-                .addElement(Powers.LESS_KNOCKBACK.getId());
+                .addElement(Powers.LESS_KNOCKBACK.getId())
+                .addElement(Powers.LUNG_CAPACITY.getId());
 
         getOrCreateRawBuilder(PowerTokenTags.NEGATIVE_POWER)
                 .addElement(Powers.LESS_HEALTH.getId())
                 .addElement(Powers.FLAMMABLE.getId())
                 .addElement(Powers.MORE_KNOCKBACK.getId())
                 .addElement(Powers.HEAVY_HANDS.getId())
-                .addElement(Powers.WEAKENED_DEFENSES.getId());
+                .addElement(Powers.WEAKENED_DEFENSES.getId())
+                .addElement(Powers.LESS_DAMAGE.getId())
+                .addElement(Powers.BIG.getId())
+                .addElement(Powers.LESS_SPEED.getId())
+                .addElement(Powers.METAL_BONES.getId())
+                .addElement(Powers.AQUAPHOBIC.getId())
+                .addElement(Powers.VAMPIRE.getId());
     }
 }

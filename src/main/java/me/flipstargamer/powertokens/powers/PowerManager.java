@@ -9,11 +9,14 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 import java.util.List;
 
+@EventBusSubscriber(modid = PowerTokens.MOD_ID)
 public class PowerManager {
     private PowerManager() {}
 
@@ -56,7 +59,7 @@ public class PowerManager {
     }
 
     @SubscribeEvent
-    private static void clonePowers(PlayerEvent.Clone event) {
+    public static void clonePowers(PlayerEvent.Clone event) {
         if (!event.isWasDeath()) return;
 
         PowerTokens.LOGGER.debug("Test test!");
@@ -73,7 +76,7 @@ public class PowerManager {
     }
 
     @SubscribeEvent
-    private static void entityJoined(EntityJoinLevelEvent event) {
+    public static void entityJoined(EntityJoinLevelEvent event) {
         if (event.getEntity() instanceof LivingEntity entity) {
             if (!entity.hasData(ModDataAttachments.PLAYER_POWERS)) return;
 
@@ -84,6 +87,23 @@ public class PowerManager {
 
                 if (truePower.shouldReapplyOnJoin())
                     truePower.apply(entity);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void tickPowers(EntityTickEvent.Post event) {
+        if (event.getEntity() instanceof LivingEntity entity) {
+            if (entity.level().isClientSide()) return;
+            if (!entity.hasData(ModDataAttachments.PLAYER_POWERS)) return;
+
+            List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
+
+            for (Holder<Power> power : powers) {
+                Power truePower = power.value();
+
+                if (truePower.shouldTick())
+                    truePower.tick(entity);
             }
         }
     }

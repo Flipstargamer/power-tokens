@@ -41,7 +41,10 @@ public class Powers {
             registerAttribute("swift_hands", Attributes.ATTACK_SPEED, 0.7f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> LESS_KNOCKBACK =
-            registerAttribute("less_knockback", Attributes.ATTACK_KNOCKBACK, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+            registerAttribute("less_knockback", Attributes.ATTACK_KNOCKBACK, -0.5f, AttributeModifier.Operation.ADD_VALUE);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> LUNG_CAPACITY =
+            registerAttribute("lung_capacity", Attributes.OXYGEN_BONUS, 2f, AttributeModifier.Operation.ADD_VALUE);
 
     // Negatives
 
@@ -55,10 +58,28 @@ public class Powers {
             registerAttribute("weakened_defense", Attributes.ARMOR, -5, AttributeModifier.Operation.ADD_VALUE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> MORE_KNOCKBACK =
-            registerAttribute("more_knockback", Attributes.ATTACK_KNOCKBACK, 0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+            registerAttribute("more_knockback", Attributes.ATTACK_KNOCKBACK, 0.5f, AttributeModifier.Operation.ADD_VALUE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> HEAVY_HANDS =
             registerAttribute("heavy_hands", Attributes.ATTACK_SPEED, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> LESS_DAMAGE =
+            registerAttribute("less_damage", Attributes.ATTACK_DAMAGE, -0.3f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> BIG =
+            registerAttribute("big", Attributes.SCALE, .3f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> LESS_SPEED =
+            registerAttribute("less_speed", Attributes.MOVEMENT_SPEED, -0.3f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> METAL_BONES =
+            registerAttribute("metal_bones", Attributes.SAFE_FALL_DISTANCE, -1f, AttributeModifier.Operation.ADD_VALUE);
+
+    public static final DeferredHolder<Power, @NotNull AquaphobicPower> AQUAPHOBIC =
+            POWERS.register("aquaphobic", AquaphobicPower::new);
+
+    public static final DeferredHolder<Power, @NotNull VampirePower> VAMPIRE =
+            POWERS.register("vampire", VampirePower::new);
 
 
 

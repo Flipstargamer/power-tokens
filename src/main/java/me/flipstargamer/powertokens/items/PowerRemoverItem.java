@@ -1,6 +1,7 @@
 package me.flipstargamer.powertokens.items;
 
 import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
 import me.flipstargamer.powertokens.powers.Power;
 import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.core.Holder;
@@ -27,6 +28,10 @@ public class PowerRemoverItem extends Item {
 
             for (Holder<Power> power : ownedPowers) {
                 PowerManager.removePower(serverPlayer, power);
+            }
+
+            if (!ownedPowers.isEmpty()) {
+                ModTriggerTypes.POWERS_WIPED_TRIGGER.get().trigger(serverPlayer);
             }
 
             return InteractionResult.SUCCESS_SERVER;
