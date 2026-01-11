@@ -20,9 +20,9 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.POWER_TOKEN.get()))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.POWER_TOKEN.get());
-                        output.accept(ModItems.POWER_TOKEN_CORE.get());
-                        output.accept(ModItems.POWER_TOKEN_SHARD.get());
                         output.accept(ModItems.UNSTABLE_POWER_TOKEN.get());
+                        output.accept(ModItems.REINFORCED_TOKEN.get());
+                        output.accept(ModItems.INVERTED_TOKEN.get());
                     })
                     .build());
 

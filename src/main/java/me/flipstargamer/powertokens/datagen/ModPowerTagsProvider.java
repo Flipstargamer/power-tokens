@@ -23,9 +23,18 @@ public class ModPowerTagsProvider extends TagsProvider<Power> {
         getOrCreateRawBuilder(PowerTokenTags.POSITIVE_POWER)
                 .addElement(Powers.HEALTH_POWER.getId())
                 .addElement(Powers.NATURAL_ARMOR.getId())
-                .addElement(Powers.SPEED_POWER.getId());
+                .addElement(Powers.TINY_POWER.getId())
+                .addElement(Powers.SPEED_POWER.getId())
+                .addElement(Powers.BURN_RESISTANCE.getId())
+                .addElement(Powers.MINER_TRAINING.getId())
+                .addElement(Powers.SWIFT_HANDS.getId())
+                .addElement(Powers.LESS_KNOCKBACK.getId());
 
         getOrCreateRawBuilder(PowerTokenTags.NEGATIVE_POWER)
-                .addElement(Powers.TINY_POWER.getId());
+                .addElement(Powers.LESS_HEALTH.getId())
+                .addElement(Powers.FLAMMABLE.getId())
+                .addElement(Powers.MORE_KNOCKBACK.getId())
+                .addElement(Powers.HEAVY_HANDS.getId())
+                .addElement(Powers.WEAKENED_DEFENSES.getId());
     }
 }

@@ -49,7 +49,7 @@ public class PowerTokenItem extends Item {
     public @NotNull InteractionResult use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
         if (player instanceof ServerPlayer serverPlayer) {
             ArrayList<Holder<Power>> powersPicked = new ArrayList<>();
-            List<Holder<Power>> ownedPowers = serverPlayer.getData(ModDataAttachments.PLAYER_POWERS);
+            List<Holder<Power>> ownedPowers = new ArrayList<>(serverPlayer.getData(ModDataAttachments.PLAYER_POWERS));
 
             for (TagKey<Power> tagKey : tagKeyList) {
                 Optional<Holder<Power>> powerOptional = getRandomPower(serverPlayer, tagKey, ownedPowers);
@@ -70,8 +70,6 @@ public class PowerTokenItem extends Item {
                 serverPlayer.sendSystemMessage(Component.translatable("item.power_tokens.power.token.pass",
                         power.value().getTranslation()));
             }
-
-            PowerTokens.LOGGER.debug("Test debug");
 
             serverPlayer.getItemInHand(hand).shrink(1);
             return InteractionResult.SUCCESS_SERVER;

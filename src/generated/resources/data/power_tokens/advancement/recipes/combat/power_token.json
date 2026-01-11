@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_core": {
+    "has_diamonds": {
       "conditions": {
         "items": [
           {
-            "items": "power_tokens:power_token_core"
+            "items": "#c:gems/diamond"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_core"
+      "has_diamonds"
     ]
   ],
   "rewards": {

@@ -3,15 +3,16 @@
   "category": "equipment",
   "key": {
     "g": "#c:ingots/gold",
-    "i": "#c:ingots/iron"
+    "i": "#c:ingots/iron",
+    "t": "power_tokens:unstable_token"
   },
   "pattern": [
-    "igi",
-    "igi",
-    "igi"
+    "gig",
+    "gtg",
+    "gig"
   ],
   "result": {
     "count": 1,
-    "id": "power_tokens:unstable_token"
+    "id": "power_tokens:inverted_token"
   }
 }

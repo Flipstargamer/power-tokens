@@ -18,8 +18,8 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(@NotNull BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.POWER_TOKEN.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.POWER_TOKEN_CORE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.POWER_TOKEN_SHARD.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.UNSTABLE_POWER_TOKEN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.REINFORCED_TOKEN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.INVERTED_TOKEN.get(), ModelTemplates.FLAT_ITEM);
     }
 }

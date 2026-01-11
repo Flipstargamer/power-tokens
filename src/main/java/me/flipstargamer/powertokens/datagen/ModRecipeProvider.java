@@ -22,41 +22,42 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         shaped(RecipeCategory.COMBAT, ModItems.POWER_TOKEN.get())
-                .pattern(" S ")
-                .pattern("SCS")
-                .pattern(" S ")
-                .define('S', ModItems.POWER_TOKEN_SHARD)
-                .define('C', ModItems.POWER_TOKEN_CORE)
-                .unlockedBy("has_core", has(ModItems.POWER_TOKEN_CORE))
-                .save(this.output);
-
-        shaped(RecipeCategory.COMBAT, ModItems.POWER_TOKEN_CORE.get())
-                .define('x', Tags.Items.NETHER_STARS)
-                .define('N', Tags.Items.INGOTS_NETHERITE)
+                .pattern("GDG")
+                .pattern("DBD")
+                .pattern("GDG")
                 .define('D', Tags.Items.GEMS_DIAMOND)
-                .pattern("DND")
-                .pattern("DxD")
-                .pattern("DND")
-                .unlockedBy("has_nether_star", has(Tags.Items.NETHER_STARS))
-                .save(this.output);
-
-        shaped(RecipeCategory.COMBAT, ModItems.POWER_TOKEN_SHARD.get())
-                .pattern("GIG")
-                .pattern("GNG")
-                .pattern("GIG")
-                .define('G', Blocks.GOLD_BLOCK)
-                .define('I', Blocks.IRON_BLOCK)
-                .define('N', Tags.Items.INGOTS_NETHERITE)
-                .unlockedBy("has_netherite", has(Tags.Items.INGOTS_NETHERITE))
+                .define('B', Blocks.DIAMOND_BLOCK)
+                .define('G', Tags.Items.INGOTS_GOLD)
+                .unlockedBy("has_diamonds", has(Tags.Items.GEMS_DIAMOND))
                 .save(this.output);
 
         shaped(RecipeCategory.COMBAT, ModItems.UNSTABLE_POWER_TOKEN.get())
-                .pattern("ccc")
                 .pattern("igi")
-                .pattern("ccc")
-                .define('c', ItemTags.COALS)
+                .pattern("igi")
+                .pattern("igi")
                 .define('i', Tags.Items.INGOTS_IRON)
                 .define('g', Tags.Items.INGOTS_GOLD)
+                .unlockedBy("has_gold", has(Tags.Items.INGOTS_GOLD))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.REINFORCED_TOKEN.get())
+                .pattern("SDS")
+                .pattern("TNT")
+                .pattern("SDS")
+                .define('S', Tags.Items.ORES_NETHERITE_SCRAP)
+                .define('N', Tags.Items.INGOTS_NETHERITE)
+                .define('T', ModItems.POWER_TOKEN.get())
+                .define('D', Tags.Items.GEMS_DIAMOND)
+                .unlockedBy("has_netherite", has(Tags.Items.INGOTS_NETHERITE))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.INVERTED_TOKEN.get())
+                .pattern("gig")
+                .pattern("gtg")
+                .pattern("gig")
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.INGOTS_GOLD)
+                .define('t', ModItems.UNSTABLE_POWER_TOKEN.get())
                 .unlockedBy("has_gold", has(Tags.Items.INGOTS_GOLD))
                 .save(this.output);
     }

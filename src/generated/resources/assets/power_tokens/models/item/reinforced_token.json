@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "power_tokens:item/power_token_core"
+    "layer0": "power_tokens:item/reinforced_token"
   }
 }

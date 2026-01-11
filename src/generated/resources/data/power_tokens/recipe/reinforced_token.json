@@ -4,15 +4,16 @@
   "key": {
     "D": "#c:gems/diamond",
     "N": "#c:ingots/netherite",
-    "x": "#c:nether_stars"
+    "S": "#c:ores/netherite_scrap",
+    "T": "power_tokens:power_token"
   },
   "pattern": [
-    "DND",
-    "DxD",
-    "DND"
+    "SDS",
+    "TNT",
+    "SDS"
   ],
   "result": {
     "count": 1,
-    "id": "power_tokens:power_token_core"
+    "id": "power_tokens:reinforced_token"
   }
 }

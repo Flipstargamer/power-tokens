@@ -2,6 +2,11 @@
   "values": [
     "power_tokens:more_health",
     "power_tokens:natural_armor",
-    "power_tokens:more_speed"
+    "power_tokens:tiny",
+    "power_tokens:more_speed",
+    "power_tokens:burn_resistance",
+    "power_tokens:miner_training",
+    "power_tokens:swift_hands",
+    "power_tokens:less_knockback"
   ]
 }

@@ -2,13 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": "power_tokens:power_token_core",
-    "S": "power_tokens:power_token_shard"
+    "B": "minecraft:diamond_block",
+    "D": "#c:gems/diamond",
+    "G": "#c:ingots/gold"
   },
   "pattern": [
-    " S ",
-    "SCS",
-    " S "
+    "GDG",
+    "DBD",
+    "GDG"
   ],
   "result": {
     "count": 1,

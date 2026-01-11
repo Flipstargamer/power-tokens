@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nether_star": {
+    "has_gold": {
       "conditions": {
         "items": [
           {
-            "items": "#c:nether_stars"
+            "items": "#c:ingots/gold"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "power_tokens:power_token_core"
+        "recipe": "power_tokens:inverted_token"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nether_star"
+      "has_gold"
     ]
   ],
   "rewards": {
     "recipes": [
-      "power_tokens:power_token_core"
+      "power_tokens:inverted_token"
     ]
   }
 }

@@ -1,5 +1,9 @@
 {
   "values": [
-    "power_tokens:tiny"
+    "power_tokens:less_health",
+    "power_tokens:flammable",
+    "power_tokens:more_knockback",
+    "power_tokens:heavy_hands",
+    "power_tokens:weakened_defense"
   ]
 }
