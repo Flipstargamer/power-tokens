@@ -2,13 +2,13 @@ package me.flipstargamer.powertokens.datagen;
 
 import me.flipstargamer.powertokens.PowerTokens;
 import me.flipstargamer.powertokens.advancements.PowerObtainedTriggerInstance;
+import me.flipstargamer.powertokens.advancements.PowersWipedTrigger;
 import me.flipstargamer.powertokens.items.ModItems;
 import me.flipstargamer.powertokens.powers.PowerPredicate;
 import me.flipstargamer.powertokens.powers.Powers;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
-import net.minecraft.advancements.criterion.RecipeCraftedTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.advancements.AdvancementSubProvider;
@@ -40,7 +40,7 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
 
         Advancement.Builder.advancement()
                 .display(
-                        ModItems.POWER_TOKEN.get(),
+                        Items.RABBIT_FOOT,
                         Component.translatable("advancements.power_tokens.speed.title"),
                         Component.translatable("advancements.power_tokens.speed.description"),
                         null,
@@ -53,6 +53,21 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
                         PowerObtainedTriggerInstance.create(new PowerPredicate(Optional.of(Powers.SPEED_POWER))))
                 .parent(root)
                 .save(writer, easyId("main/speed_boost"));
+
+        Advancement.Builder.advancement()
+                .display(
+                        ModItems.INVERTED_TOKEN.get(),
+                        Component.translatable("advancements.power_tokens.wiped.title"),
+                        Component.translatable("advancements.power_tokens.wiped.description"),
+                        null,
+                        AdvancementType.GOAL,
+                        true,
+                        true,
+                        false
+                )
+                .addCriterion("wiped_powers", PowersWipedTrigger.createCriterion())
+                .parent(root)
+                .save(writer, easyId("main/wiped_powers"));
     }
 
     private Identifier easyId(String path) {

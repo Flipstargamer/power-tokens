@@ -1,0 +1,27 @@
+{
+  "parent": "power_tokens:main/root",
+  "criteria": {
+    "wiped_powers": {
+      "trigger": "power_tokens:powers_wiped_trigger"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.power_tokens.wiped.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "power_tokens:inverted_token"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.wiped.title"
+    }
+  },
+  "requirements": [
+    [
+      "wiped_powers"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

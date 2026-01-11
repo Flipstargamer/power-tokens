@@ -8,7 +8,7 @@
     }
   },
   "display": {
-    "background": "minecraft:textures/block/dirt",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
       "translate": "advancements.power_tokens.root.description"
     },

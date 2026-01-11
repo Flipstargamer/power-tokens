@@ -4,6 +4,11 @@
     "power_tokens:flammable",
     "power_tokens:more_knockback",
     "power_tokens:heavy_hands",
-    "power_tokens:weakened_defense"
+    "power_tokens:weakened_defense",
+    "power_tokens:less_damage",
+    "power_tokens:big",
+    "power_tokens:less_speed",
+    "power_tokens:metal_bones",
+    "power_tokens:aquaphobic"
   ]
 }
