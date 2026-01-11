@@ -18,7 +18,7 @@ import java.util.List;
 public class PowerListPanel extends ScrollPanel {
     public List<Holder<Power>> powers = new ArrayList<>();
 
-    private static final int ENTRY_HEIGHT = 15;
+    private static final int ENTRY_HEIGHT = 14;
 
     public PowerListPanel(Minecraft client, int width, int height, int top, int left) {
         super(client, width, height, top, left);
@@ -46,11 +46,18 @@ public class PowerListPanel extends ScrollPanel {
                 continue;
             }
 
-            boolean isHovered = mouseX >= this.left && mouseX <= right && mouseY >= entryY && mouseY < entryY + ENTRY_HEIGHT;
+            int entryTopY = entryY - 2;
+            int entryBottomY = entryY + ENTRY_HEIGHT - 2;
+
+            boolean isHovered = mouseX >= this.left && mouseX <= right && mouseY >= entryTopY && mouseY < entryBottomY;
             boolean isPositive = powerHolder.value().is(PowerTokenTags.POSITIVE_POWER);
+            boolean isNegative = powerHolder.value().is(PowerTokenTags.NEGATIVE_POWER);
 
             MutableComponent text = powerHolder.value().getTranslation();
-            int color = isPositive ? 0xff80efc2 : 0xffd95763;
+            int color = 0xFFFFFFFF;
+
+            if (isPositive) color = 0xff80efc2;
+            if (isNegative) color = 0xffd95763;
 
             if (isHovered) text.withStyle(ChatFormatting.UNDERLINE);
 

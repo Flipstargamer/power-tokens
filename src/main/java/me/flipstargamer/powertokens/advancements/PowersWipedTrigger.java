@@ -23,7 +23,7 @@ public class PowersWipedTrigger extends SimpleCriterionTrigger<PowersWipedTrigge
     }
 
     public void trigger(ServerPlayer player) {
-        this.trigger(player, _ -> true);
+        this.trigger(player, instance -> true);
     }
 
     public record Instance(Optional<ContextAwarePredicate> player) implements SimpleCriterionTrigger.SimpleInstance {
