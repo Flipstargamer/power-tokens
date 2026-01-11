@@ -27,6 +27,12 @@ public class PowerListScreen extends Screen {
         super(Component.translatable("menu.power_list.title"));
     }
 
+    private int getPowerWeight(Holder<Power> powerHolder) {
+        if (powerHolder.is(PowerTokenTags.NEGATIVE_POWER)) return 0;
+        if (powerHolder.is(PowerTokenTags.POSITIVE_POWER)) return 2;
+        return 1;
+    }
+
     @Override
     protected void init() {
         uiLeft = (width - IMAGE_WIDTH) / 2;
@@ -38,8 +44,8 @@ public class PowerListScreen extends Screen {
         ArrayList<Holder<Power>> powerList = new ArrayList<>(minecraft.player.getData(ModDataAttachments.PLAYER_POWERS));
 
         powerList.sort((a, b) -> {
-            if (a.is(PowerTokenTags.POSITIVE_POWER)) return -1;
-            if (b.is(PowerTokenTags.POSITIVE_POWER)) return 1;
+            if (getPowerWeight(a) > getPowerWeight(b)) return -1;
+            if (getPowerWeight(b) > getPowerWeight(a)) return 1;
 
             return a.value().getTranslation().getString().compareToIgnoreCase(b.value().getTranslation().getString());
         });
