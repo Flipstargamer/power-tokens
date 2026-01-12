@@ -30,7 +30,7 @@ public class Powers {
             registerAttribute("more_speed", Attributes.MOVEMENT_SPEED, 0.6f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> TINY_POWER =
-            registerAttribute("tiny", Attributes.ARMOR, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+            registerAttribute("tiny", Attributes.SCALE, -0.5f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> NATURAL_ARMOR =
             registerAttribute("natural_armor", Attributes.ARMOR, 5, AttributeModifier.Operation.ADD_VALUE);
