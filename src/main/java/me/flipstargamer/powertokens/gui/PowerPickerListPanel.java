@@ -4,9 +4,12 @@ import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.input.MouseButtonEvent;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import org.jetbrains.annotations.Nullable;
 
 public class PowerPickerListPanel extends PowerListPanel {
@@ -36,6 +39,9 @@ public class PowerPickerListPanel extends PowerListPanel {
     protected boolean clickPanel(double mouseX, double mouseY, MouseButtonEvent event) {
         if (hoveredEntry != null) {
             selectedPower = hoveredEntry;
+
+            assert Minecraft.getInstance().level != null;
+            Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK, 1.0F));
         }
 
         return super.clickPanel(mouseX, mouseY, event);
