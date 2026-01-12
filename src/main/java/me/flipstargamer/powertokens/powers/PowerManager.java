@@ -31,7 +31,9 @@ public class PowerManager {
         entity.syncData(ModDataAttachments.PLAYER_POWERS);
 
         Power truePower = power.value();
-        truePower.apply(entity);
+
+        if (truePower instanceof PowerApplyable applyable)
+            applyable.apply(entity);
 
         if (entity instanceof ServerPlayer player) {
             ModTriggerTypes.POWER_OBTAINED_TRIGGER.get().trigger(player, power.value());
@@ -52,7 +54,9 @@ public class PowerManager {
         entity.syncData(ModDataAttachments.PLAYER_POWERS);
 
         Power truePower = power.value();
-        truePower.remove(entity);
+
+        if (truePower instanceof PowerRevocable revocable)
+            revocable.revoke(entity);
     }
 
     public static void removePower(LivingEntity entity, Power power) {
@@ -86,8 +90,8 @@ public class PowerManager {
             for (Holder<Power> power : powers) {
                 Power truePower = power.value();
 
-                if (truePower.shouldReapplyOnJoin())
-                    truePower.apply(entity);
+                if (truePower instanceof PowerApplyable applyable && applyable.shouldReapplyOnJoin())
+                    applyable.apply(entity);
             }
         }
     }
@@ -103,8 +107,8 @@ public class PowerManager {
             for (Holder<Power> power : powers) {
                 Power truePower = power.value();
 
-                if (truePower.shouldTick())
-                    truePower.tick(entity);
+                if (truePower instanceof PowerTickable tickable)
+                    tickable.tick(entity);
             }
         }
     }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "power_tokens:reinforced_token",
+    "N": "#c:nether_stars",
+    "R": "minecraft:redstone_block",
+    "T": "power_tokens:power_token"
+  },
+  "pattern": [
+    "RTR",
+    "CNC",
+    "RTR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "power_tokens:selective_token"
+  }
+}

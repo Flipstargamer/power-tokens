@@ -4,7 +4,7 @@
   "key": {
     "D": "#c:gems/diamond",
     "N": "#c:ingots/netherite",
-    "S": "#c:ores/netherite_scrap",
+    "S": "minecraft:netherite_scrap",
     "T": "power_tokens:power_token"
   },
   "pattern": [

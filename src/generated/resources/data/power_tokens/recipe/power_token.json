@@ -2,13 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "B": "minecraft:diamond_block",
     "D": "#c:gems/diamond",
     "G": "#c:ingots/gold"
   },
   "pattern": [
     "GDG",
-    "DBD",
+    "DDD",
     "GDG"
   ],
   "result": {

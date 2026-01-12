@@ -1,5 +1,7 @@
 package me.flipstargamer.powertokens.powers.power;
 
+import me.flipstargamer.powertokens.powers.PowerApplyable;
+import me.flipstargamer.powertokens.powers.PowerRevocable;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
@@ -8,7 +10,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 
-public class AttributePower extends Power {
+public class AttributePower extends Power implements PowerApplyable, PowerRevocable {
     public final Holder<Attribute> attribute;
     public final float value;
     public final AttributeModifier.Operation operation;
@@ -35,7 +37,12 @@ public class AttributePower extends Power {
     }
 
     @Override
-    public void remove(LivingEntity entity) {
+    public boolean shouldReapplyOnJoin() {
+        return false;
+    }
+
+    @Override
+    public void revoke(LivingEntity entity) {
         AttributeMap attributeMap = entity.getAttributes();
         AttributeInstance attributeInstance = attributeMap.getInstance(attribute);
 

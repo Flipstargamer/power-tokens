@@ -1,9 +1,11 @@
-// 1.21.11	2026-01-11T15:39:19.2580366	kinetica
+// 1.21.11	2026-01-12T18:52:56.3128192	kinetica
 64df49d47df7f771157120dc1bd300d77f955bdd data/power_tokens/advancement/recipes/combat/inverted_token.json
 5a2f06748776cf31cbbf7bbb5e8f782a366a39d4 data/power_tokens/advancement/recipes/combat/power_token.json
 5d139ab0ea3256e7520a4c8650c9a4e1812912cd data/power_tokens/advancement/recipes/combat/reinforced_token.json
+aefa78aec64b1161aecfefc86346186cd55162ad data/power_tokens/advancement/recipes/combat/selective_token.json
 8a49d5fa1dd8bac5c9bd6e4ee4eda4239e2a0c34 data/power_tokens/advancement/recipes/combat/unstable_token.json
 121ada18852e5d56ee4961850b7bfac744e698ab data/power_tokens/recipe/inverted_token.json
-5e8db8be2d49ded0d8c46f30582aa9408b3f82f5 data/power_tokens/recipe/power_token.json
-c0a40cbc437f68e6ea464e5490bbc91cb782be05 data/power_tokens/recipe/reinforced_token.json
+a9be1cadd92ef6bb68eb04f17b3e71a1e7144f66 data/power_tokens/recipe/power_token.json
+0fc417ac4156d1c01021aaef4a05c0164676a8f7 data/power_tokens/recipe/reinforced_token.json
+e9aa3b3a4ad8d56e5851d8951a8cefb504109303 data/power_tokens/recipe/selective_token.json
 e17c5ec3e6185aa0cc559d2b831745a1000f7da4 data/power_tokens/recipe/unstable_token.json
