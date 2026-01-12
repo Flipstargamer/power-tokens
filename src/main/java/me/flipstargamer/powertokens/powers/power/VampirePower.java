@@ -20,7 +20,7 @@ public class VampirePower extends Power implements PowerTickable {
             List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
 
             if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) return;
-            if (powers.contains(Powers.BURN_RESISTANCE) || powers.contains(Powers.FLAMMABLE)) return;
+            if (powers.contains(Powers.BURN_RESISTANCE) && !powers.contains(Powers.FLAMMABLE)) return;
 
             entity.igniteForTicks(Math.clamp(entity.getRemainingFireTicks() + 3, 20, 100));
             entity.hurtServer((ServerLevel) entity.level(), new DamageSource(
