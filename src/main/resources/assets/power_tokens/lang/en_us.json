@@ -74,5 +74,6 @@
   "menu.power_list.title": "Powers",
   "menu.power_list.no_powers": "You currently have no powers!",
   "menu.power_picker.title": "Pick a Power",
-  "menu.power_picker.confirm": "Confirm"
+  "menu.power_picker.confirm": "Confirm",
+  "menu.power_picker.no_pickable_powers": "There is no more powers left."
 }
