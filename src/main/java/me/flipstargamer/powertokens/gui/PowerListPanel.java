@@ -50,6 +50,11 @@ public class PowerListPanel extends ScrollPanel {
             int entryBottomY = entryY + ENTRY_HEIGHT - 2;
 
             boolean isHovered = mouseX >= this.left && mouseX <= right && mouseY >= entryTopY && mouseY < entryBottomY;
+
+            if (mouseY <= top || mouseY >= bottom) {
+                isHovered = false;
+            }
+
             boolean isPositive = powerHolder.value().is(PowerTokenTags.POSITIVE_POWER);
             boolean isNegative = powerHolder.value().is(PowerTokenTags.NEGATIVE_POWER);
 

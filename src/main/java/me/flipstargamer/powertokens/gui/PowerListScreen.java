@@ -38,7 +38,7 @@ public class PowerListScreen extends Screen {
         uiLeft = (width - IMAGE_WIDTH) / 2;
         uiTop = (height - IMAGE_HEIGHT) / 2;
 
-        PowerListPanel listPanel = new PowerListPanel(minecraft, IMAGE_WIDTH - 14, IMAGE_HEIGHT - 25, uiTop + 20, uiLeft + 7);
+        PowerListPanel listPanel = new PowerListPanel(minecraft, IMAGE_WIDTH - 15, IMAGE_HEIGHT - 28, uiTop + 20, uiLeft + 7);
 
         assert minecraft.player != null;
         ArrayList<Holder<Power>> powerList = new ArrayList<>(minecraft.player.getData(ModDataAttachments.PLAYER_POWERS));
