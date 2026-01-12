@@ -1,0 +1,242 @@
+{
+  "parent": "power_tokens:main/wiped_powers",
+  "criteria": {
+    "has_aquaphobic": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:aquaphobic"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_big": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:big"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_burn_resistance": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:burn_resistance"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_flammable": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:flammable"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_heavy_hands": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:heavy_hands"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_less_damage": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:less_damage"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_less_health": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:less_health"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_less_knockback": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:less_knockback"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_less_speed": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:less_speed"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_lung_capacity": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:lung_capacity"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_metal_bones": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:metal_bones"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_miner_training": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:miner_training"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_more_health": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:more_health"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_more_knockback": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:more_knockback"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_more_speed": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:more_speed"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_natural_armor": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:natural_armor"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_swift_hands": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:swift_hands"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_tiny": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:tiny"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_vampire": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:vampire"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_weakened_defense": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:weakened_defense"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.power_tokens.all_powers.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "power_tokens:reinforced_token"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.all_powers.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_more_health"
+    ],
+    [
+      "has_more_speed"
+    ],
+    [
+      "has_tiny"
+    ],
+    [
+      "has_natural_armor"
+    ],
+    [
+      "has_burn_resistance"
+    ],
+    [
+      "has_miner_training"
+    ],
+    [
+      "has_swift_hands"
+    ],
+    [
+      "has_less_knockback"
+    ],
+    [
+      "has_lung_capacity"
+    ],
+    [
+      "has_less_health"
+    ],
+    [
+      "has_flammable"
+    ],
+    [
+      "has_weakened_defense"
+    ],
+    [
+      "has_more_knockback"
+    ],
+    [
+      "has_heavy_hands"
+    ],
+    [
+      "has_less_damage"
+    ],
+    [
+      "has_big"
+    ],
+    [
+      "has_less_speed"
+    ],
+    [
+      "has_metal_bones"
+    ],
+    [
+      "has_aquaphobic"
+    ],
+    [
+      "has_vampire"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
