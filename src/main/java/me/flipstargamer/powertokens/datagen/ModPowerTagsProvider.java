@@ -3,7 +3,7 @@ package me.flipstargamer.powertokens.datagen;
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.PowerTokens;
 import me.flipstargamer.powertokens.PowerTokenTags;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import me.flipstargamer.powertokens.powers.Powers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

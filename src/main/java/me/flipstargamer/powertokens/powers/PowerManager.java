@@ -4,6 +4,7 @@ import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.PowerTokens;
 import me.flipstargamer.powertokens.ModDataAttachments;
 import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;

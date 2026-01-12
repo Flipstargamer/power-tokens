@@ -2,6 +2,10 @@ package me.flipstargamer.powertokens.powers;
 
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.PowerTokens;
+import me.flipstargamer.powertokens.powers.power.AquaphobicPower;
+import me.flipstargamer.powertokens.powers.power.AttributePower;
+import me.flipstargamer.powertokens.powers.power.Power;
+import me.flipstargamer.powertokens.powers.power.VampirePower;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;

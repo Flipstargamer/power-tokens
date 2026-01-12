@@ -1,6 +1,7 @@
-package me.flipstargamer.powertokens.powers;
+package me.flipstargamer.powertokens.powers.power;
 
 import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.powers.Powers;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;

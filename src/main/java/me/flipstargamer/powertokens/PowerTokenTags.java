@@ -1,6 +1,6 @@
 package me.flipstargamer.powertokens;
 
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 

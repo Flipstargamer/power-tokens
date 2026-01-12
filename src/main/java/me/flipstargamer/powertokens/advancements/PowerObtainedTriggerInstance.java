@@ -2,7 +2,7 @@ package me.flipstargamer.powertokens.advancements;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import me.flipstargamer.powertokens.powers.PowerPredicate;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.criterion.ContextAwarePredicate;

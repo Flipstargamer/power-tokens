@@ -1,4 +1,4 @@
-package me.flipstargamer.powertokens.powers;
+package me.flipstargamer.powertokens.powers.power;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;

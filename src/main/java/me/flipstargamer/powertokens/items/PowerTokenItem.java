@@ -2,8 +2,7 @@ package me.flipstargamer.powertokens.items;
 
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.ModDataAttachments;
-import me.flipstargamer.powertokens.PowerTokens;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;

@@ -2,7 +2,7 @@ package me.flipstargamer.powertokens.items;
 
 import me.flipstargamer.powertokens.ModDataAttachments;
 import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import me.flipstargamer.powertokens.powers.PowerManager;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;

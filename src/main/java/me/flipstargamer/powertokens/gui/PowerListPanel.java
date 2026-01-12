@@ -1,7 +1,7 @@
 package me.flipstargamer.powertokens.gui;
 
 import me.flipstargamer.powertokens.PowerTokenTags;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
