@@ -1,6 +1,7 @@
 package me.flipstargamer.powertokens.powers.power;
 
 import me.flipstargamer.powertokens.ModDataAttachments;
+import me.flipstargamer.powertokens.powers.PowerTickable;
 import me.flipstargamer.powertokens.powers.Powers;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -12,13 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 import java.util.List;
 
-public class VampirePower extends Power {
-    @Override
-    public void apply(LivingEntity entity) {}
-
-    @Override
-    public void remove(LivingEntity entity) {}
-
+public class VampirePower extends Power implements PowerTickable {
     @Override
     public void tick(LivingEntity entity) {
         if (entity.level().isBrightOutside() && entity.level().canSeeSky(entity.blockPosition())) {
@@ -32,10 +27,5 @@ public class VampirePower extends Power {
                     entity.level().registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(DamageTypes.IN_FIRE)
             ), 1f);
         }
-    }
-
-    @Override
-    public boolean shouldTick() {
-        return true;
     }
 }

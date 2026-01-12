@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
@@ -23,10 +24,9 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes() {
         shaped(RecipeCategory.COMBAT, ModItems.POWER_TOKEN.get())
                 .pattern("GDG")
-                .pattern("DBD")
+                .pattern("DDD")
                 .pattern("GDG")
                 .define('D', Tags.Items.GEMS_DIAMOND)
-                .define('B', Blocks.DIAMOND_BLOCK)
                 .define('G', Tags.Items.INGOTS_GOLD)
                 .unlockedBy("has_diamonds", has(Tags.Items.GEMS_DIAMOND))
                 .save(this.output);
@@ -44,7 +44,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("SDS")
                 .pattern("TNT")
                 .pattern("SDS")
-                .define('S', Tags.Items.ORES_NETHERITE_SCRAP)
+                .define('S', Items.NETHERITE_SCRAP)
                 .define('N', Tags.Items.INGOTS_NETHERITE)
                 .define('T', ModItems.POWER_TOKEN.get())
                 .define('D', Tags.Items.GEMS_DIAMOND)
@@ -59,6 +59,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('g', Tags.Items.INGOTS_GOLD)
                 .define('t', ModItems.UNSTABLE_POWER_TOKEN.get())
                 .unlockedBy("has_gold", has(Tags.Items.INGOTS_GOLD))
+                .save(this.output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.SELECTIVE_TOKEN.get())
+                .pattern("RTR")
+                .pattern("CNC")
+                .pattern("RTR")
+                .define('C', ModItems.REINFORCED_TOKEN.get())
+                .define('T', ModItems.POWER_TOKEN.get())
+                .define('N', Tags.Items.NETHER_STARS)
+                .define('R', Items.REDSTONE_BLOCK)
+                .unlockedBy("has_nether_star", has(Tags.Items.NETHER_STARS))
                 .save(this.output);
     }
 
