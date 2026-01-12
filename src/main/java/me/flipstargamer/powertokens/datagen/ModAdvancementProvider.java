@@ -29,7 +29,7 @@ public class ModAdvancementProvider implements AdvancementSubProvider {
                         ModItems.POWER_TOKEN.get(),
                         Component.translatable("advancements.power_tokens.root.title"),
                         Component.translatable("advancements.power_tokens.root.description"),
-                        Identifier.fromNamespaceAndPath("minecraft", "textures/gui/advancements/backgrounds/stone.png"),
+                        Identifier.fromNamespaceAndPath("minecraft", "gui/advancements/backgrounds/stone"),
                         AdvancementType.TASK,
                         true,
                         true,
