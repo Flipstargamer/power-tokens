@@ -49,7 +49,7 @@ public class Powers {
     // Negatives
 
     public static final DeferredHolder<Power, @NotNull AttributePower> LESS_HEALTH =
-            registerAttribute("less_health", Attributes.MAX_HEALTH, -5, AttributeModifier.Operation.ADD_VALUE);
+            registerAttribute("less_health", Attributes.MAX_HEALTH, -10, AttributeModifier.Operation.ADD_VALUE);
 
     public static final DeferredHolder<Power, @NotNull AttributePower> FLAMMABLE =
             registerAttribute("flammable", Attributes.BURNING_TIME, 1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
