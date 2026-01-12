@@ -23,6 +23,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.UNSTABLE_POWER_TOKEN.get());
                         output.accept(ModItems.REINFORCED_TOKEN.get());
                         output.accept(ModItems.INVERTED_TOKEN.get());
+                        output.accept(ModItems.SELECTIVE_TOKEN.get());
                     })
                     .build());
 

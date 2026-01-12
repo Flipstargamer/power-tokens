@@ -37,6 +37,8 @@ public class PowerRemoverItem extends Item {
             return InteractionResult.SUCCESS_SERVER;
         }
 
+        player.getItemInHand(hand).shrink(1);
+
         return InteractionResult.SUCCESS;
     }
 }
