@@ -1,9 +1,7 @@
 package me.flipstargamer.powertokens.items;
 
 import me.flipstargamer.powertokens.ModDataAttachments;
-import me.flipstargamer.powertokens.gui.PowerListScreen;
-import me.flipstargamer.powertokens.gui.PowerPickerScreen;
-import net.minecraft.client.Minecraft;
+import me.flipstargamer.powertokens.gui.PowerPickerHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -18,7 +16,7 @@ public class PowerSelectorItem extends Item {
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (level.isClientSide()) {
-            Minecraft.getInstance().setScreen(new PowerPickerScreen(player.getItemInHand(hand)));
+            PowerPickerHelper.open(player.getItemInHand(hand));
 
             return InteractionResult.SUCCESS;
         }
