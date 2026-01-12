@@ -28,6 +28,9 @@ public class ModItems {
     public static final DeferredItem<@NotNull PowerRemoverItem> INVERTED_TOKEN = ITEMS.registerItem("inverted_token",
             PowerRemoverItem::new, () -> new Item.Properties().useCooldown(1).stacksTo(16));
 
+    public static final DeferredItem<@NotNull PowerSelectorItem> SELECTIVE_TOKEN = ITEMS.registerItem("selective_token",
+            PowerSelectorItem::new, () -> new Item.Properties().stacksTo(16));
+
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }

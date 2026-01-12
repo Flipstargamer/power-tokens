@@ -5,6 +5,7 @@
   "item.power_tokens.unstable_token": "Unstable Token",
   "item.power_tokens.reinforced_token": "Reinforced Token",
   "item.power_tokens.inverted_token": "Inverted Token",
+  "item.power_tokens.selective_token": "Selective Token",
 
   "item.power_tokens.power_token.fail": "§4You failed to use the power token.",
   "item.power_tokens.power.token.pass": "You gained the %s ability.",
@@ -71,5 +72,7 @@
   "key.power_tokens.open_powers": "Open Power List",
 
   "menu.power_list.title": "Powers",
-  "menu.power_list.no_powers": "You currently have no powers!"
+  "menu.power_list.no_powers": "You currently have no powers!",
+  "menu.power_picker.title": "Pick a Power",
+  "menu.power_picker.confirm": "Confirm"
 }

@@ -1,9 +1,11 @@
-// 1.21.11	2026-01-11T15:23:21.2375166	Model Definitions - power_tokens
+// 1.21.11	2026-01-12T14:16:29.3268144	Model Definitions - power_tokens
 9b53a5db54c31b06ef62e8aeee0d69ad0a065142 assets/power_tokens/items/inverted_token.json
 c8c6acbc2f577c87ee492beb0efb37112d3394f7 assets/power_tokens/items/power_token.json
 b799f5dbc56f66c3d4a378e8e7ec3eeab5f76660 assets/power_tokens/items/reinforced_token.json
+fa80a14fc080c4929658cfff7eb357aa9c428b6d assets/power_tokens/items/selective_token.json
 0675327eb7e6bb8b49c5554f9eab5950a0960fcf assets/power_tokens/items/unstable_token.json
 dc2221a087e76968d5278f4f9335154fede54c7b assets/power_tokens/models/item/inverted_token.json
 a0c8663c06b4010e15fc943de91f9d6ef5a59f11 assets/power_tokens/models/item/power_token.json
 a9b5f96b92200364a8a275281fef21d62fdebb81 assets/power_tokens/models/item/reinforced_token.json
+8bd36f55f2569adb4108f58cede026b16c16646b assets/power_tokens/models/item/selective_token.json
 bf35b2dedc1c54259a1cd8d8ef887d780a7ac784 assets/power_tokens/models/item/unstable_token.json

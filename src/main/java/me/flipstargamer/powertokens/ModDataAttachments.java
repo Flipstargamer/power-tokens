@@ -22,6 +22,9 @@ public class ModDataAttachments {
                     .sync((holder, player) -> holder == player, ByteBufCodecs.collection(ArrayList::new, ByteBufCodecs.holderRegistry(PowerTokenRegistries.POWER_REGISTRY_KEY)))
                     .build());
 
+    public static final Supplier<AttachmentType<Boolean>> CAN_PICK_POWER = ATTACHMENT_TYPES.register("can_pick_power",
+            () -> AttachmentType.builder(() -> false).build());
+
     public static void register(IEventBus bus) {
         ATTACHMENT_TYPES.register(bus);
     }
