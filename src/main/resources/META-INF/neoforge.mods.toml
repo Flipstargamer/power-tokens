@@ -40,7 +40,9 @@ authors="rt4 (Flipstargamer)"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+Power Tokens provide token items which can be used to gain positive and negative powers. This creates a fun and new way to play Minecraft.
+
+Press [V] to open up a list of your powers.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
