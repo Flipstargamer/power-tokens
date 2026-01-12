@@ -1,0 +1,31 @@
+{
+  "parent": "power_tokens:main/speed_boost",
+  "criteria": {
+    "has_vampire": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:vampire"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.power_tokens.vampire.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:gunpowder"
+    },
+    "title": {
+      "translate": "advancements.power_tokens.vampire.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vampire"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
