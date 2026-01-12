@@ -1,4 +1,4 @@
-package me.flipstargamer.powertokens.powers;
+package me.flipstargamer.powertokens.powers.power;
 
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;

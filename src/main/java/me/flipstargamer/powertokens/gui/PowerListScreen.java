@@ -3,7 +3,7 @@ package me.flipstargamer.powertokens.gui;
 import me.flipstargamer.powertokens.ModDataAttachments;
 import me.flipstargamer.powertokens.PowerTokenTags;
 import me.flipstargamer.powertokens.PowerTokens;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderPipelines;

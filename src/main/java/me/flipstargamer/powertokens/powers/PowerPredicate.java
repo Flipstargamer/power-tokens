@@ -2,6 +2,7 @@ package me.flipstargamer.powertokens.powers;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.core.Holder;
 
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package me.flipstargamer.powertokens.advancements;
 
 import com.mojang.serialization.Codec;
-import me.flipstargamer.powertokens.powers.Power;
+import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.advancements.criterion.SimpleCriterionTrigger;
 import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;

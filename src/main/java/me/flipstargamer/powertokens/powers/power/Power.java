@@ -1,7 +1,8 @@
-package me.flipstargamer.powertokens.powers;
+package me.flipstargamer.powertokens.powers.power;
 
 import com.mojang.serialization.Codec;
 import me.flipstargamer.powertokens.PowerTokenRegistries;
+import me.flipstargamer.powertokens.powers.PowerComparable;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
