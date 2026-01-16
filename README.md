@@ -34,10 +34,10 @@ Powers are random passive effects you have that are permentant till you wipe the
 
 # Power Tokens
 To gain a power you must first craft one of the power tokens. There are three different types of power tokens.
-* Unstable Token - Cheapest, however provides two debuff powers for a random buff power.
-* Power Token - Provides a random buff power alongside a random debuff power.
-* Reinforced Token - Provides a random buff power only.
-* Selective Token -  Allows you to pick one power.
+* **Unstable Token** - Cheapest, however provides two debuff powers for a random buff power.
+* **Power Token** - Provides a random buff power alongside a random debuff power.
+* **Reinforced Token** - Provides a random buff power only.
+* **Selective Token** -  Allows you to pick one power.
 
 ## Reseting
 You may be unsatisfied with your debuffs, so you can craft an **Inverted Token**. to remove all your powers. However, this includes all your buffs.
