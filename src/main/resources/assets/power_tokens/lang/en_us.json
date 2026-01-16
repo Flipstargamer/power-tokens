@@ -40,7 +40,7 @@
   "powers.power_tokens.swift_hands.description": "Gain a 70% attack speed boost.",
   "powers.power_tokens.less_knockback.description": "Deal 50% less knockback when attacking.",
   "powers.power_tokens.lung_capacity.description": "You have 2x more air under water.",
-  "powers.power_tokens.less_health.description": "Loose 2.5 hearts.",
+  "powers.power_tokens.less_health.description": "Loose 5 hearts.",
   "powers.power_tokens.flammable.description": "Burn for double the time.",
   "powers.power_tokens.weakened_defense.description": "Passively loose 2.5 armor points.",
   "powers.power_tokens.more_knockback.description": "Deal 50% more knockback when attacking.",
@@ -48,7 +48,7 @@
   "powers.power_tokens.less_damage.description": "Less Damage",
   "powers.power_tokens.big.description": "Become 30% bigger.",
   "powers.power_tokens.less_speed.description": "Become 30% slower",
-  "powers.power_tokens.metal_bones.description": "Take fall 1 block earlier.",
+  "powers.power_tokens.metal_bones.description": "Take fall damage 1 block earlier.",
   "powers.power_tokens.aquaphobic.description": "Take damage when touching water.",
   "powers.power_tokens.vampire.description": "Burn when in broad daylight.",
 
