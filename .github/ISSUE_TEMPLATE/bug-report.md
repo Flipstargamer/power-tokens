@@ -1,5 +1,5 @@
 ---
-name: Bug report
+name: Bug Report
 about: Create a report about a bug or issue in the mod.
 title: ''
 labels: bug
