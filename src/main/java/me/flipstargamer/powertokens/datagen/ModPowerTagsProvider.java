@@ -29,7 +29,11 @@ public class ModPowerTagsProvider extends TagsProvider<Power> {
                 .addElement(Powers.MINER_TRAINING.getId())
                 .addElement(Powers.SWIFT_HANDS.getId())
                 .addElement(Powers.LESS_KNOCKBACK.getId())
-                .addElement(Powers.LUNG_CAPACITY.getId());
+                .addElement(Powers.LUNG_CAPACITY.getId())
+                .addElement(Powers.MORE_REACH.getId())
+                .addElement(Powers.EYE_ENHANCEMENTS.getId())
+                .addElement(Powers.TRAMPOLINE.getId())
+                .addElement(Powers.QUICK_LEARNER.getId());
 
         getOrCreateRawBuilder(PowerTokenTags.NEGATIVE_POWER)
                 .addElement(Powers.LESS_HEALTH.getId())

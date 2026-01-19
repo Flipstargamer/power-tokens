@@ -7,12 +7,14 @@ import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
 import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 import java.util.List;
@@ -63,6 +65,11 @@ public class PowerManager {
         removePower(entity, PowerTokenRegistries.POWER_REGISTRY.wrapAsHolder(power));
     }
 
+    public static boolean hasPower(LivingEntity entity, Holder<Power> power) {
+        List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
+        return powers.contains(power);
+    }
+
     @SubscribeEvent
     public static void clonePowers(PlayerEvent.Clone event) {
         if (!event.isWasDeath()) return;
@@ -110,6 +117,16 @@ public class PowerManager {
                 if (truePower instanceof PowerTickable tickable)
                     tickable.tick(entity);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void expGained(PlayerXpEvent.PickupXp event) {
+        Player player = event.getEntity();
+        ExperienceOrb orb = event.getOrb();
+
+        if (PowerManager.hasPower(player, Powers.QUICK_LEARNER)) {
+            orb.setValue(orb.getValue() * 2);
         }
     }
 }

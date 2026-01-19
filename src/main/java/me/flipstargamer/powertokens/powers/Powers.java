@@ -2,10 +2,7 @@ package me.flipstargamer.powertokens.powers;
 
 import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.PowerTokens;
-import me.flipstargamer.powertokens.powers.power.AquaphobicPower;
-import me.flipstargamer.powertokens.powers.power.AttributePower;
-import me.flipstargamer.powertokens.powers.power.Power;
-import me.flipstargamer.powertokens.powers.power.VampirePower;
+import me.flipstargamer.powertokens.powers.power.*;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -50,6 +47,18 @@ public class Powers {
     public static final DeferredHolder<Power, @NotNull AttributePower> LUNG_CAPACITY =
             registerAttribute("lung_capacity", Attributes.OXYGEN_BONUS, 2f, AttributeModifier.Operation.ADD_VALUE);
 
+    public static final DeferredHolder<Power, @NotNull AttributePower> MORE_REACH =
+            registerAttribute("more_reach", Attributes.ENTITY_INTERACTION_RANGE, 2f, AttributeModifier.Operation.ADD_VALUE);
+
+    public static final DeferredHolder<Power, @NotNull NightVisionPower> EYE_ENHANCEMENTS =
+            POWERS.register("eye_enhancements", NightVisionPower::new);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> TRAMPOLINE =
+            registerAttribute("trampoline", Attributes.JUMP_STRENGTH, 0.35f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+
+    public static final DeferredHolder<Power, @NotNull Power> QUICK_LEARNER =
+            POWERS.register("quick_learner", Power::new);
+
     // Negatives
 
     public static final DeferredHolder<Power, @NotNull AttributePower> LESS_HEALTH =
@@ -84,8 +93,6 @@ public class Powers {
 
     public static final DeferredHolder<Power, @NotNull VampirePower> VAMPIRE =
             POWERS.register("vampire", VampirePower::new);
-
-
 
     private static DeferredHolder<Power, @NotNull AttributePower> registerAttribute(String name,
                                                                                    Holder<Attribute> attributeHolder,
