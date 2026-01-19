@@ -8,6 +8,10 @@
     "power_tokens:miner_training",
     "power_tokens:swift_hands",
     "power_tokens:less_knockback",
-    "power_tokens:lung_capacity"
+    "power_tokens:lung_capacity",
+    "power_tokens:more_reach",
+    "power_tokens:eye_enhancements",
+    "power_tokens:trampoline",
+    "power_tokens:quick_learner"
   ]
 }

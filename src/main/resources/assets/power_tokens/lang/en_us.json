@@ -19,6 +19,11 @@
   "powers.power_tokens.swift_hands": "Swift Hands",
   "powers.power_tokens.less_knockback": "Less Knockback",
   "powers.power_tokens.lung_capacity": "Lung Capacity",
+  "powers.power_tokens.more_reach": "More Reach",
+  "powers.power_tokens.eye_enhancements": "Eye Enhancements",
+  "powers.power_tokens.trampoline": "Trampoline",
+  "powers.power_tokens.quick_learner": "Quick Learner",
+
   "powers.power_tokens.less_health": "Less Health",
   "powers.power_tokens.flammable": "Flammable",
   "powers.power_tokens.weakened_defense": "Weakened Defenses",
@@ -40,6 +45,11 @@
   "powers.power_tokens.swift_hands.description": "Gain a 70% attack speed boost.",
   "powers.power_tokens.less_knockback.description": "Deal 50% less knockback when attacking.",
   "powers.power_tokens.lung_capacity.description": "You have 2x more air under water.",
+  "powers.power_tokens.more_reach.description": "Gain 2 blocks of entity reach.",
+  "powers.power_tokens.eye_enhancements.description": "Gain night vision.",
+  "powers.power_tokens.trampoline.description": "Jump 35% higher.",
+  "powers.power_tokens.quick_learner.description": "Earn 2x more experience.",
+
   "powers.power_tokens.less_health.description": "Loose 5 hearts.",
   "powers.power_tokens.flammable.description": "Burn for double the time.",
   "powers.power_tokens.weakened_defense.description": "Passively loose 2.5 armor points.",

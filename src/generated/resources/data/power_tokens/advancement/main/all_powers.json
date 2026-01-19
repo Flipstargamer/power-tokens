@@ -25,6 +25,14 @@
       },
       "trigger": "power_tokens:power_triggers"
     },
+    "has_eye_enhancements": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:eye_enhancements"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
     "has_flammable": {
       "conditions": {
         "power": {
@@ -113,6 +121,14 @@
       },
       "trigger": "power_tokens:power_triggers"
     },
+    "has_more_reach": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:more_reach"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
     "has_more_speed": {
       "conditions": {
         "power": {
@@ -129,6 +145,14 @@
       },
       "trigger": "power_tokens:power_triggers"
     },
+    "has_quick_learner": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:quick_learner"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
     "has_swift_hands": {
       "conditions": {
         "power": {
@@ -141,6 +165,14 @@
       "conditions": {
         "power": {
           "power": "power_tokens:tiny"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_trampoline": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:trampoline"
         }
       },
       "trigger": "power_tokens:power_triggers"
@@ -203,6 +235,18 @@
     ],
     [
       "has_lung_capacity"
+    ],
+    [
+      "has_more_reach"
+    ],
+    [
+      "has_eye_enhancements"
+    ],
+    [
+      "has_trampoline"
+    ],
+    [
+      "has_quick_learner"
     ],
     [
       "has_less_health"
