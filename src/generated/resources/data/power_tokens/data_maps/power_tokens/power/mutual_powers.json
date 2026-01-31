@@ -1,0 +1,16 @@
+{
+  "values": {
+    "power_tokens:big": [
+      "power_tokens:tiny"
+    ],
+    "power_tokens:carnivore": [
+      "power_tokens:vegetarian"
+    ],
+    "power_tokens:tiny": [
+      "power_tokens:big"
+    ],
+    "power_tokens:vegetarian": [
+      "power_tokens:carnivore"
+    ]
+  }
+}

@@ -34,9 +34,8 @@ public class PowerTokenItem extends Item {
     private Optional<Holder<Power>> getRandomPower(LivingEntity entity, TagKey<Power> fromTag, List<Holder<Power>> ownedPowers) {
         Registry<Power> powerRegistry = entity.level().registryAccess().lookupOrThrow(PowerTokenRegistries.POWER_REGISTRY_KEY);
 
-        List<Holder<Power>> available = powerRegistry.getOrThrow(fromTag).stream()
-                .filter((power) -> !ownedPowers.contains(power))
-                .toList();
+        List<Holder<Power>> available =
+                PowerManager.getObtainablePowers(ownedPowers, powerRegistry.getOrThrow(fromTag).stream().toList());
 
         if (available.isEmpty())
             return Optional.empty();
