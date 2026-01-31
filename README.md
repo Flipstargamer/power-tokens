@@ -1,6 +1,7 @@
 <div align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/power-tokens"><img alt="CurseForge Downloads" src="https://img.shields.io/curseforge/dt/1429556?logo=CurseForge&label=Downloads&labelColor=black&color=orange&cacheSeconds=30&link=https%3A%2F%2Fwww.curseforge.com%2Fminecraft%2Fmc-mods%2Fpower-tokens"></a>
   <a href="https://github.com/Flipstargamer/power-tokens/blob/master/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/flipstargamer/power-tokens?label=License&labelColor=black&color=red"></a>
+  <a href="https://modrinth.com/mod/power-tokens"><img alt="Modrinth Downloads" src="https://img.shields.io/modrinth/dt/aFQ8moOI?logo=Modrinth&label=Downloads&labelColor=black&color=green"></a>
 </div>
 
 
