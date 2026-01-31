@@ -94,6 +94,18 @@ public class Powers {
     public static final DeferredHolder<Power, @NotNull VampirePower> VAMPIRE =
             POWERS.register("vampire", VampirePower::new);
 
+    public static final DeferredHolder<Power, @NotNull Power> CARNIVORE =
+            POWERS.register("carnivore", Power::new);
+
+    public static final DeferredHolder<Power, @NotNull Power> VEGETARIAN =
+            POWERS.register("vegetarian", Power::new);
+
+    public static final DeferredHolder<Power, @NotNull AttributePower> BAD_LUCK =
+            registerAttribute("bad_luck", Attributes.LUCK, -10, AttributeModifier.Operation.ADD_VALUE);
+
+    public static final DeferredHolder<Power, @NotNull Power> BAD_LEARNER =
+            POWERS.register("bad_learner", Power::new);
+
     private static DeferredHolder<Power, @NotNull AttributePower> registerAttribute(String name,
                                                                                    Holder<Attribute> attributeHolder,
                                                                                    float value,

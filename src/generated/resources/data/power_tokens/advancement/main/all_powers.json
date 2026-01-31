@@ -9,6 +9,22 @@
       },
       "trigger": "power_tokens:power_triggers"
     },
+    "has_bad_learner": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:bad_learner"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_bad_luck": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:bad_luck"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
     "has_big": {
       "conditions": {
         "power": {
@@ -21,6 +37,14 @@
       "conditions": {
         "power": {
           "power": "power_tokens:burn_resistance"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
+    "has_carnivore": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:carnivore"
         }
       },
       "trigger": "power_tokens:power_triggers"
@@ -185,6 +209,14 @@
       },
       "trigger": "power_tokens:power_triggers"
     },
+    "has_vegetarian": {
+      "conditions": {
+        "power": {
+          "power": "power_tokens:vegetarian"
+        }
+      },
+      "trigger": "power_tokens:power_triggers"
+    },
     "has_weakened_defense": {
       "conditions": {
         "power": {
@@ -280,6 +312,18 @@
     ],
     [
       "has_vampire"
+    ],
+    [
+      "has_carnivore"
+    ],
+    [
+      "has_vegetarian"
+    ],
+    [
+      "has_bad_luck"
+    ],
+    [
+      "has_bad_learner"
     ]
   ],
   "sends_telemetry_event": true
