@@ -4,6 +4,7 @@ import me.flipstargamer.powertokens.PowerTokenRegistries;
 import me.flipstargamer.powertokens.PowerTokens;
 import me.flipstargamer.powertokens.ModDataAttachments;
 import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
+import me.flipstargamer.powertokens.datamaps.ModDataMaps;
 import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
@@ -22,6 +23,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @EventBusSubscriber(modid = PowerTokens.MOD_ID)
@@ -73,6 +75,24 @@ public class PowerManager {
     public static boolean hasPower(LivingEntity entity, Holder<Power> power) {
         List<Holder<Power>> powers = entity.getData(ModDataAttachments.PLAYER_POWERS);
         return powers.contains(power);
+    }
+
+    public static List<Holder<Power>> getObtainablePowers(List<Holder<Power>> ownedPowers , List<Holder<Power>> powerList) {
+        List<Holder<Power>> mutualPowers = new ArrayList<>();
+
+        for (Holder<Power> owned : ownedPowers) {
+            List<Holder<Power>> mutual = owned.getData(ModDataMaps.MUTUAL_POWERS);
+            if (mutual == null) continue;
+
+            PowerTokens.LOGGER.info(mutual.toString());
+
+            mutualPowers.addAll(mutual);
+        }
+
+        return powerList.stream()
+                .filter(power -> !ownedPowers.contains(power))
+                .filter(power -> !mutualPowers.contains(power))
+                .toList();
     }
 
     @SubscribeEvent

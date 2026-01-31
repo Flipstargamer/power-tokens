@@ -23,6 +23,7 @@ public class DataGenerators {
         event.addProvider(new ModModelProvider(output));
         event.createProvider(ModRecipeProvider.Runner::new);
         event.createProvider(ModPowerTagsProvider::new);
+        event.createProvider(ModDataMapProvider::new);
 
         event.addProvider(new AdvancementProvider(
                 output, lookupProvider,
