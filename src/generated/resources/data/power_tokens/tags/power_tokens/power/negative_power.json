@@ -10,6 +10,10 @@
     "power_tokens:less_speed",
     "power_tokens:metal_bones",
     "power_tokens:aquaphobic",
+    "power_tokens:carnivore",
+    "power_tokens:vegetarian",
+    "power_tokens:bad_luck",
+    "power_tokens:bad_learner",
     "power_tokens:vampire"
   ]
 }

@@ -35,6 +35,10 @@
   "powers.power_tokens.metal_bones": "Metal Bones",
   "powers.power_tokens.aquaphobic": "Aquaphobic",
   "powers.power_tokens.vampire": "Vampire",
+  "powers.power_tokens.bad_luck": "Bad Luck",
+  "powers.power_tokens.bad_learner": "Bad Learner",
+  "powers.power_tokens.carnivore": "Carnivore",
+  "powers.power_tokens.vegetarian": "Vegetarian",
 
   "powers.power_tokens.more_health.description": "Gain 5 more hearts.",
   "powers.power_tokens.more_speed.description": "Gain a 60% speed boost.",
@@ -61,7 +65,10 @@
   "powers.power_tokens.metal_bones.description": "Take fall damage 1 block earlier.",
   "powers.power_tokens.aquaphobic.description": "Take damage when touching water.",
   "powers.power_tokens.vampire.description": "Burn when in broad daylight.",
-
+  "powers.power_tokens.bad_luck.description": "Loot becomes worse.",
+  "powers.power_tokens.bad_learner.description": "Earn 2x less experience.",
+  "powers.power_tokens.carnivore.description": "Eating plant-based food gives you poison.",
+  "powers.power_tokens.vegetarian.description": "Eating meat-based food gives you poison.",
 
   "advancements.power_tokens.root.title": "Tapping into Potential",
   "advancements.power_tokens.root.description": "Unlock your first power!",

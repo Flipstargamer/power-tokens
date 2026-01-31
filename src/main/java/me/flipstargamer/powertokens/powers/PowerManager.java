@@ -7,12 +7,17 @@ import me.flipstargamer.powertokens.advancements.ModTriggerTypes;
 import me.flipstargamer.powertokens.powers.power.Power;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -128,5 +133,18 @@ public class PowerManager {
         if (PowerManager.hasPower(player, Powers.QUICK_LEARNER)) {
             orb.setValue(orb.getValue() * 2);
         }
+
+        if (PowerManager.hasPower(player, Powers.BAD_LEARNER)) {
+            orb.setValue(orb.getValue() / 2);
+        }
+    }
+
+    @SubscribeEvent
+    public static void foodEaten(LivingEntityUseItemEvent.Finish event) {
+        if (hasPower(event.getEntity(), Powers.CARNIVORE) && event.getItem().is(Tags.Items.FOODS_VEGETABLE))
+            event.getEntity().addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2));
+
+        if (hasPower(event.getEntity(), Powers.VEGETARIAN) && event.getItem().is(ItemTags.MEAT))
+            event.getEntity().addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2));
     }
 }

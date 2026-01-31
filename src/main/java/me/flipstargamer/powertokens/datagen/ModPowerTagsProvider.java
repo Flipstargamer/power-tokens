@@ -46,6 +46,10 @@ public class ModPowerTagsProvider extends TagsProvider<Power> {
                 .addElement(Powers.LESS_SPEED.getId())
                 .addElement(Powers.METAL_BONES.getId())
                 .addElement(Powers.AQUAPHOBIC.getId())
+                .addElement(Powers.CARNIVORE.getId())
+                .addElement(Powers.VEGETARIAN.getId())
+                .addElement(Powers.BAD_LUCK.getId())
+                .addElement(Powers.BAD_LEARNER.getId())
                 .addElement(Powers.VAMPIRE.getId());
     }
 }
